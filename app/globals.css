@@ -12,9 +12,6 @@
 
   --font-display: 'Barlow Condensed', 'Helvetica Neue', 'Arial Narrow', Arial, sans-serif;
   --font-technical: 'IBM Plex Mono', 'Courier New', monospace;
-
-  --spacing-section: 10rem;
-  --radius-none: 0px;
 }
 
 /* ─── Base ─────────────────────────────────────────────────── */
@@ -26,7 +23,7 @@
   }
 
   html {
-    scroll-behavior: auto; /* Lenis handles smooth scroll */
+    scroll-behavior: auto;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -144,13 +141,6 @@
   width: 100%;
   background-color: var(--color-ink);
   opacity: 0.45;
-}
-
-/* ─── Cursor custom (desktop) ───────────────────────────────── */
-@media (pointer: fine) {
-  *, *::before, *::after {
-    cursor: none !important;
-  }
 }
 
 /* ─── Reduced motion ────────────────────────────────────────── */

@@ -27,14 +27,16 @@ export function TechnicalImage({ src, alt, label, className, ...props }: Technic
 export function TechnicalPlaceholder({
   label = 'asset',
   className = '',
+  style,
 }: {
   label?: string
   className?: string
+  style?: React.CSSProperties
 }) {
   return (
     <div
       className={`relative overflow-hidden ${className}`}
-      style={{ backgroundColor: '#EDEAE3' }}
+      style={{ backgroundColor: '#EDEAE3', ...style }}
       aria-label={`Imagen no disponible: ${label}`}
     >
       <svg

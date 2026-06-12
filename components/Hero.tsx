@@ -2,14 +2,28 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
+import { PHONE_HREF, PHONE_DISPLAY, WHATSAPP_URL } from '@/lib/constants'
 
-const LINES = ['JOSÉ ÁNGEL', 'MARTÍN']
+function PhoneIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+      <path d="M2.5 1h3l1.5 3.5-1.5 1a9 9 0 0 0 4 4l1-1.5L14 9.5V13a1.5 1.5 0 0 1-1.5 1.5C5.5 14.5.5 9.5.5 3A1.5 1.5 0 0 1 2.5 1z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  )
+}
 
 export function Hero() {
   const reduced = useReducedMotion()
   const [vpWidth, setVpWidth] = useState(0)
   const [dimVisible, setDimVisible] = useState(false)
-  const lineRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setVpWidth(window.innerWidth)
@@ -19,107 +33,99 @@ export function Hero() {
   }, [])
 
   useEffect(() => {
-    const t = setTimeout(() => setDimVisible(true), reduced ? 0 : 1400)
+    const t = setTimeout(() => setDimVisible(true), reduced ? 0 : 800)
     return () => clearTimeout(t)
   }, [reduced])
 
-  const container = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
-  }
-
-  const lineVariant = {
-    hidden: { clipPath: 'inset(0 100% 0 0)' },
-    show: { clipPath: 'inset(0 0% 0 0)', transition: { duration: 0.9, ease: [0.76, 0, 0.24, 1] } },
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault()
+    document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24 px-6 md:px-12 pt-24 overflow-hidden"
-      aria-label="Sección principal"
+      className="relative min-h-screen flex flex-col justify-end pb-14 md:pb-20 px-4 md:px-10 pt-24 overflow-hidden"
+      aria-label="Licencias de actividad en Pedro Muñoz"
     >
-      {/* Número de sección */}
+      {/* Anotación técnica — número de sección */}
       <div
-        className="absolute top-20 left-6 md:left-12 opacity-30"
+        className="absolute top-20 left-4 md:left-10 opacity-30"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em' }}
         aria-hidden="true"
       >
-        00.0 — HERO
+        00.0 — INICIO
       </div>
 
-      {/* Marca de anotación lateral derecha */}
+      {/* Anotación lateral derecha (solo desktop) */}
       <div
-        className="absolute top-24 right-6 md:right-12 hidden md:flex flex-col items-end gap-1 opacity-35"
+        className="absolute top-24 right-4 md:right-10 hidden md:flex flex-col items-end gap-1 opacity-30"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 9 }}
         aria-hidden="true"
       >
         <span>FECHA: 2026.06</span>
-        <span>ESCALA: 1:1</span>
-        <span>HOJA: 1/1</span>
+        <span>NORMATIVA: CTE · REBT</span>
+        <span>ÁMBITO: C.R. + COMARCA</span>
       </div>
 
       {/* Línea vertical de referencia */}
       <motion.div
-        className="absolute left-6 md:left-12 hidden md:block"
-        style={{ top: '15%', bottom: '15%', width: 1, backgroundColor: 'var(--color-ink)', opacity: 0.1 }}
+        className="absolute left-4 md:left-10 hidden md:block"
+        style={{ top: '15%', bottom: '15%', width: 1, backgroundColor: 'var(--color-ink)', opacity: 0.08 }}
         initial={{ scaleY: 0, transformOrigin: 'top' }}
         animate={{ scaleY: 1 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 1.0, delay: 0.2 }}
         aria-hidden="true"
       />
 
-      {/* Título display */}
-      <motion.div
-        ref={lineRef}
-        variants={reduced ? undefined : container}
-        initial={reduced ? undefined : 'hidden'}
-        animate={reduced ? undefined : 'show'}
-        className="relative z-10 mb-6"
-      >
-        {LINES.map((line) => (
-          <div key={line} className="overflow-hidden leading-none">
-            <motion.h1
-              variants={reduced ? undefined : lineVariant}
-              className="font-display block"
-              style={{
-                fontSize: 'clamp(3.5rem, 14vw, 14rem)',
-                color: 'var(--color-ink)',
-              }}
-            >
-              {line}
-            </motion.h1>
-          </div>
-        ))}
-      </motion.div>
+      {/* H1 */}
+      <div className="overflow-hidden mb-4">
+        <motion.h1
+          className="font-display block"
+          style={{ fontSize: 'clamp(2.8rem, 10vw, 11rem)', color: 'var(--color-ink)' }}
+          initial={reduced ? undefined : { clipPath: 'inset(0 100% 0 0)' }}
+          animate={reduced ? undefined : { clipPath: 'inset(0 0% 0 0)' }}
+          transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
+        >
+          Licencias de actividad
+        </motion.h1>
+      </div>
+      <div className="overflow-hidden mb-8">
+        <motion.div
+          className="font-display block"
+          style={{ fontSize: 'clamp(2.8rem, 10vw, 11rem)', color: 'var(--color-ink)' }}
+          initial={reduced ? undefined : { clipPath: 'inset(0 100% 0 0)' }}
+          animate={reduced ? undefined : { clipPath: 'inset(0 0% 0 0)' }}
+          transition={{ duration: 0.9, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
+          aria-hidden="true"
+        >
+          en Pedro Muñoz y comarca
+        </motion.div>
+      </div>
 
-      {/* Línea de cota horizontal — mide el ancho real del viewport */}
+      {/* Línea de cota */}
       <motion.div
-        className="relative z-10 mb-8 overflow-hidden"
+        className="mb-6 overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: dimVisible ? 1 : 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
         aria-hidden="true"
       >
         <div className="flex items-center gap-0 w-full">
-          {/* Tick izquierdo */}
           <div style={{ width: 1, height: 10, backgroundColor: 'var(--color-accent)', flexShrink: 0 }} />
-          {/* Línea animada */}
           <motion.div
             style={{ height: 1, backgroundColor: 'var(--color-accent)', flexGrow: 1 }}
             initial={{ scaleX: 0, transformOrigin: 'left' }}
             animate={{ scaleX: dimVisible ? 1 : 0 }}
-            transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           />
-          {/* Tick derecho */}
           <div style={{ width: 1, height: 10, backgroundColor: 'var(--color-accent)', flexShrink: 0 }} />
-          {/* Etiqueta */}
           <motion.span
             className="ml-3 whitespace-nowrap"
             style={{ fontFamily: 'var(--font-technical)', fontSize: 10, color: 'var(--color-accent)', letterSpacing: '0.1em' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: dimVisible ? 1 : 0 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.7 }}
           >
             ↔ {vpWidth}px
           </motion.span>
@@ -127,48 +133,102 @@ export function Hero() {
       </motion.div>
 
       {/* Subtítulo */}
-      <motion.div
-        className="relative z-10 flex flex-wrap items-center gap-x-4 gap-y-2 mb-8"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: reduced ? 0 : 0.8 }}
+      <motion.p
+        className="mb-8 max-w-xl"
+        style={{ fontFamily: 'var(--font-technical)', fontSize: 14, lineHeight: 1.65, color: 'var(--color-ink)', opacity: 0.72 }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 0.72, y: 0 }}
+        transition={{ duration: 0.6, delay: reduced ? 0 : 0.55 }}
       >
-        <span
-          style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-ink)', opacity: 0.75 }}
+        Ingeniero industrial colegiado. Tramito tu expediente de principio a fin ante el Ayuntamiento y la Junta de Comunidades.{' '}
+        <span style={{ opacity: 0.6 }}>Sin colas, sin burocracia, sin sorpresas.</span>
+      </motion.p>
+
+      {/* CTAs */}
+      <motion.div
+        className="flex flex-wrap gap-3"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: reduced ? 0 : 0.7 }}
+      >
+        {/* WhatsApp — primario */}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-5 py-3 transition-opacity hover:opacity-85 active:opacity-75"
+          style={{
+            backgroundColor: '#25D366',
+            color: '#fff',
+            fontFamily: 'var(--font-technical)',
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+          }}
+          aria-label="Escribir por WhatsApp"
         >
-          Ingeniero Industrial
-        </span>
-        <span style={{ width: 1, height: 12, backgroundColor: 'var(--color-ink)', opacity: 0.3, display: 'inline-block' }} />
-        <span style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.5 }}>
-          Pedro Muñoz · Ciudad Real
-        </span>
-        <span style={{ width: 1, height: 12, backgroundColor: 'var(--color-ink)', opacity: 0.3, display: 'inline-block' }} />
-        <span style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.5 }}>
-          Licencias · Solar · BT · VE
-        </span>
+          <WhatsAppIcon />
+          Escribir por WhatsApp
+        </a>
+
+        {/* Llamar */}
+        <a
+          href={PHONE_HREF}
+          className="flex items-center gap-2 px-5 py-3 transition-opacity hover:opacity-75"
+          style={{
+            border: '1px solid var(--color-accent)',
+            color: 'var(--color-accent)',
+            fontFamily: 'var(--font-technical)',
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+          }}
+          aria-label={`Llamar al ${PHONE_DISPLAY}`}
+        >
+          <PhoneIcon />
+          Llamar
+        </a>
+
+        {/* Presupuesto */}
+        <a
+          href="#contacto"
+          onClick={scrollToContact}
+          className="flex items-center gap-2 px-5 py-3 transition-opacity hover:opacity-75"
+          style={{
+            border: '1px solid rgba(20,20,20,0.25)',
+            color: 'var(--color-ink)',
+            fontFamily: 'var(--font-technical)',
+            fontSize: 12,
+            letterSpacing: '0.08em',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+            opacity: 0.8,
+          }}
+        >
+          Pedir presupuesto →
+        </a>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Indicador scroll */}
       <motion.div
-        className="relative z-10 flex items-center gap-3"
+        className="absolute bottom-6 left-4 md:left-10 flex items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: reduced ? 0 : 1.4 }}
-        aria-label="Desplaza hacia abajo para continuar"
+        transition={{ delay: reduced ? 0 : 1.1 }}
+        aria-hidden="true"
       >
         <motion.div
-          animate={reduced ? {} : { y: [0, 6, 0] }}
+          animate={reduced ? {} : { y: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
         >
-          {/* Arrow técnica SVG */}
-          <svg width="14" height="20" viewBox="0 0 14 20" fill="none" aria-hidden="true">
-            <line x1="7" y1="0" x2="7" y2="16" stroke="var(--color-ink)" strokeWidth="1" opacity="0.5" />
-            <polyline points="3,11 7,16 11,11" fill="none" stroke="var(--color-ink)" strokeWidth="1" opacity="0.5" />
+          <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+            <line x1="6" y1="0" x2="6" y2="14" stroke="var(--color-ink)" strokeWidth="1" opacity="0.4"/>
+            <polyline points="2,10 6,14 10,10" fill="none" stroke="var(--color-ink)" strokeWidth="1" opacity="0.4"/>
           </svg>
         </motion.div>
-        <span
-          style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.1em', opacity: 0.4 }}
-        >
+        <span style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.1em', opacity: 0.35 }}>
           01.0 →
         </span>
       </motion.div>
