@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #EDEAE3;
+  --color-ink: #141414;
+  --color-accent: #2240C9;
+  --color-accent-10: rgba(34, 64, 201, 0.1);
+  --color-ink-40: rgba(20, 20, 20, 0.4);
+  --color-ink-20: rgba(20, 20, 20, 0.2);
+  --color-ink-10: rgba(20, 20, 20, 0.1);
+  --color-ink-06: rgba(20, 20, 20, 0.06);
+
+  --font-display: 'Barlow Condensed', 'Helvetica Neue', 'Arial Narrow', Arial, sans-serif;
+  --font-technical: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --spacing-section: 10rem;
+  --radius-none: 0px;
+}
+
+/* ─── Base ─────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-technical);
+    overflow-x: hidden;
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+  }
+}
+
+/* ─── Custom utilities ──────────────────────────────────────── */
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+@utility font-technical {
+  font-family: var(--font-technical);
+}
+
+/* ─── Grid milimetrado global ───────────────────────────────── */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--color-ink) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, var(--color-ink) 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+  opacity: 0.055;
+}
+
+/* ─── Línea de cota ─────────────────────────────────────────── */
+.dim-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent);
+}
+.dim-line::before,
+.dim-line::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ─── Rotring underline ─────────────────────────────────────── */
+.rotring {
+  position: relative;
+  text-decoration: none;
+}
+.rotring::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rotring:hover::after,
+.rotring:focus-visible::after {
+  width: 100%;
+}
+
+/* ─── Sello revisión ────────────────────────────────────────── */
+.stamp {
+  display: inline-block;
+  border: 1px solid var(--color-ink);
+  padding: 1px 5px;
+  font-family: var(--font-technical);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  opacity: 0.55;
+  text-transform: uppercase;
+}
+
+/* ─── Cruces de registro ────────────────────────────────────── */
+.cross-mark {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+}
+.cross-mark::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-ink);
+  opacity: 0.45;
+}
+.cross-mark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-ink);
+  opacity: 0.45;
+}
+
+/* ─── Cursor custom (desktop) ───────────────────────────────── */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
+/* ─── Reduced motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
