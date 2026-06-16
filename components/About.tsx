@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
-import { TechnicalPlaceholder } from './TechnicalImage'
+import { TechnicalImage } from './TechnicalImage'
 
 export function About() {
   const reduced = useReducedMotion()
@@ -32,7 +32,14 @@ export function About() {
             className="relative overflow-hidden"
             style={{ border: '1px solid rgba(20,20,20,0.18)', maxWidth: 420, aspectRatio: '4/5' }}
           >
-            <TechnicalPlaceholder label="retrato.jpg" className="w-full h-full" />
+            <TechnicalImage
+              src="/media/retrato.jpg"
+              alt="Retrato de José Ángel Martín"
+              label="retrato.jpg"
+              fill
+              sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
+              style={{ objectFit: 'cover' }}
+            />
             <div className="cross-mark top-3 left-3" />
             <div className="cross-mark top-3 right-3" />
             <div className="cross-mark bottom-3 left-3" />
