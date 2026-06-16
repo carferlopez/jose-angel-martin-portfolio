@@ -45,7 +45,7 @@ export function Navigation() {
       animate={{ height: scrolled ? 52 : 64 }}
       style={{
         borderBottom: scrolled ? '1px solid rgba(20,20,20,0.1)' : '1px solid transparent',
-        backgroundColor: scrolled ? 'rgba(237,234,227,0.94)' : 'transparent',
+        backgroundColor: scrolled ? 'rgba(255,255,255,0.94)' : 'transparent',
         backdropFilter: scrolled ? 'blur(10px)' : 'none',
       }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
