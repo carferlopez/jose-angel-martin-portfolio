@@ -68,7 +68,7 @@ export function About() {
               className="font-display mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 4.5rem)', color: 'var(--color-ink)' }}
             >
-              José Ángel Martín
+              <span className="highlight-heading">José Ángel Martín</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.1em', opacity: 0.45, textTransform: 'uppercase' }}>
               Ingeniero Industrial Colegiado

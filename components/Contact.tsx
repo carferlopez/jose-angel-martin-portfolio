@@ -77,7 +77,7 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
           >
-            Hablamos
+            <span className="highlight-heading">Hablamos</span>
           </motion.h2>
 
           <p style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.75, opacity: 0.65 }}>

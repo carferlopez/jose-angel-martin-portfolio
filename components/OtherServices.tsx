@@ -48,7 +48,7 @@ export function OtherServices() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Otros servicios
+          <span className="highlight-heading">Otros servicios</span>
         </motion.h2>
 
         <div className="grid sm:grid-cols-3 gap-6 flex-1">
@@ -72,7 +72,7 @@ export function OtherServices() {
                 className="font-display mb-2"
                 style={{ fontSize: 'clamp(1rem, 1.8vw, 1.4rem)', color: 'var(--color-ink)' }}
               >
-                {s.title}
+                <span className="highlight-heading">{s.title}</span>
               </h3>
               <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, lineHeight: 1.65, opacity: 0.6 }}>
                 {s.desc}

@@ -63,7 +63,7 @@ export function Process() {
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
         >
-          Proceso en 4 pasos
+          <span className="highlight-heading">Proceso en 4 pasos</span>
         </motion.h2>
 
         <ol className="grid md:grid-cols-4 gap-0 list-none">
@@ -90,7 +90,7 @@ export function Process() {
                 className="font-display mb-3"
                 style={{ fontSize: 'clamp(1.1rem, 2vw, 1.8rem)', color: 'var(--color-paper)' }}
               >
-                {step.title}
+                <span className="highlight-heading">{step.title}</span>
               </h3>
               <p style={{ fontFamily: 'var(--font-technical)', fontSize: 12, lineHeight: 1.7, color: 'var(--color-paper)', opacity: 0.6 }}>
                 {step.desc}

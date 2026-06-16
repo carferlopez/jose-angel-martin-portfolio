@@ -65,7 +65,7 @@ export function Service() {
               className="font-display"
               style={{ fontSize: 'clamp(2rem, 5vw, 5.5rem)', color: 'var(--color-ink)' }}
             >
-              ¿Qué es una licencia de actividad?
+              <span className="highlight-heading">¿Qué es una licencia de actividad?</span>
             </h2>
             <p
               className="mt-4 leading-relaxed"
@@ -128,7 +128,7 @@ export function Service() {
               className="font-display mb-5"
               style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2.5rem)', color: 'var(--color-ink)' }}
             >
-              Qué incluye mi servicio
+              <span className="highlight-heading">Qué incluye mi servicio</span>
             </h3>
             <ul className="space-y-2 list-none">
               {INCLUDED.map((item, i) => (
@@ -155,7 +155,7 @@ export function Service() {
               className="font-display mb-4"
               style={{ fontSize: 'clamp(1.2rem, 2vw, 2rem)', color: 'var(--color-ink)' }}
             >
-              ¿Para qué tipo de negocios?
+              <span className="highlight-heading">¿Para qué tipo de negocios?</span>
             </h3>
             <div className="flex flex-wrap gap-2">
               {BUSINESS_TYPES.map((type) => (

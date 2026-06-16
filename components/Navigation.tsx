@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants'
@@ -48,18 +47,16 @@ export function Navigation() {
         href="#"
         onClick={scrollTo('#hero')}
         className="relative block select-none"
-        animate={{ width: scrolled ? 58 : 76, height: scrolled ? 58 : 76 }}
+        animate={{ width: scrolled ? 108 : 136, height: scrolled ? 54 : 68 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         style={{ textDecoration: 'none' }}
         aria-label="José Ángel Martín — inicio"
       >
-        <Image
-          src="/media/logo.jpeg"
+        <img
+          src="/media/Logo%20B%3AN/1.svg"
           alt="Záncara OHM"
-          fill
-          priority
-          sizes="76px"
-          style={{ objectFit: 'contain' }}
+          className="h-full w-full"
+          style={{ objectFit: 'contain', display: 'block' }}
         />
       </motion.a>
 

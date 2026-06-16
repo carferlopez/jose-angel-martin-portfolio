@@ -54,7 +54,7 @@ export function Coverage() {
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
           >
-            Dónde trabajo
+            <span className="highlight-heading">Dónde trabajo</span>
           </motion.h2>
 
           <motion.p

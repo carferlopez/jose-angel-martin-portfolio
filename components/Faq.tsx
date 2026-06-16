@@ -131,7 +131,7 @@ export function Faq() {
             className="font-display md:sticky md:top-24"
             style={{ fontSize: 'clamp(2rem, 4vw, 4.5rem)', color: 'var(--color-ink)' }}
           >
-            Preguntas frecuentes
+            <span className="highlight-heading">Preguntas frecuentes</span>
           </h2>
         </div>
         <div>
