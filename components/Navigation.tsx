@@ -35,7 +35,7 @@ export function Navigation() {
   return (
     <motion.header
       className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 md:px-10"
-      animate={{ height: scrolled ? 52 : 64 }}
+      animate={{ height: scrolled ? 72 : 92 }}
       style={{
         borderBottom: scrolled ? '1px solid rgba(20,20,20,0.1)' : '1px solid transparent',
         backgroundColor: scrolled ? 'rgba(255,255,255,0.94)' : 'transparent',
@@ -48,7 +48,7 @@ export function Navigation() {
         href="#"
         onClick={scrollTo('#hero')}
         className="relative block select-none"
-        animate={{ width: scrolled ? 38 : 46, height: scrolled ? 38 : 46 }}
+        animate={{ width: scrolled ? 58 : 76, height: scrolled ? 58 : 76 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         style={{ textDecoration: 'none' }}
         aria-label="José Ángel Martín — inicio"
@@ -58,7 +58,7 @@ export function Navigation() {
           alt="Záncara OHM"
           fill
           priority
-          sizes="46px"
+          sizes="76px"
           style={{ objectFit: 'contain' }}
         />
       </motion.a>
@@ -94,7 +94,7 @@ export function Navigation() {
         {/* Teléfono */}
         <a
           href={PHONE_HREF}
-          className="flex items-center gap-2 px-3 py-1.5 transition-opacity hover:opacity-75"
+          className="cta-blue-hover flex items-center gap-2 px-3 py-1.5 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
           style={{
             border: '1px solid rgba(20,20,20,0.3)',
             color: 'var(--color-ink)',

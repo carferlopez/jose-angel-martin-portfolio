@@ -89,7 +89,7 @@ export function Contact() {
           <div className="flex flex-col gap-3">
             <a
               href={PHONE_HREF}
-              className="flex items-center justify-center gap-3 py-4 transition-opacity hover:opacity-75"
+              className="cta-blue-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
               style={{
                 border: '2px solid var(--color-ink)',
                 color: 'var(--color-ink)',
@@ -170,7 +170,7 @@ export function Contact() {
                 <motion.button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="relative overflow-hidden w-full"
+                  className="cta-blue-hover relative overflow-hidden w-full hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
                   style={{
                     border: '1px solid var(--color-ink)',
                     backgroundColor: 'transparent',
@@ -181,7 +181,7 @@ export function Contact() {
                     textTransform: 'uppercase',
                     padding: '14px 24px',
                   }}
-                  whileHover={reduced ? undefined : { backgroundColor: 'var(--color-ink)', color: 'var(--color-paper)' }}
+                  whileHover={reduced ? undefined : { backgroundColor: 'var(--color-accent)', borderColor: 'var(--color-accent)', color: 'var(--color-paper)' }}
                   transition={{ duration: 0.2 }}
                 >
                   {status === 'sending' ? 'Enviando…' : 'Enviar mensaje →'}

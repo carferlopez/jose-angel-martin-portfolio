@@ -104,6 +104,21 @@
   width: 100%;
 }
 
+.cta-blue-hover {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+.cta-blue-hover:hover,
+.cta-blue-hover:focus-visible {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-paper) !important;
+  opacity: 1 !important;
+}
+
 /* ─── Sello revisión ────────────────────────────────────────── */
 .stamp {
   display: inline-block;

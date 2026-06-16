@@ -37,12 +37,12 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-end pb-14 md:pb-20 px-4 md:px-10 pt-24 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-end pb-14 md:pb-20 px-4 md:px-10 pt-32 overflow-hidden"
       aria-label="Licencias de actividad en Pedro Muñoz"
     >
       {/* Anotación técnica — número de sección */}
       <div
-        className="absolute top-20 left-4 md:left-10 opacity-30"
+        className="absolute top-28 left-4 md:left-10 opacity-30"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em' }}
         aria-hidden="true"
       >
@@ -51,7 +51,7 @@ export function Hero() {
 
       {/* Anotación lateral derecha (solo desktop) */}
       <div
-        className="absolute top-24 right-4 md:right-10 hidden md:flex flex-col items-end gap-1 opacity-30"
+        className="absolute top-32 right-4 md:right-10 hidden md:flex flex-col items-end gap-1 opacity-30"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 9 }}
         aria-hidden="true"
       >
@@ -146,7 +146,7 @@ export function Hero() {
         {/* Llamar */}
         <a
           href={PHONE_HREF}
-          className="flex items-center gap-2 px-5 py-3 transition-opacity hover:opacity-75"
+          className="cta-blue-hover flex items-center gap-2 px-5 py-3 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
           style={{
             border: '1px solid var(--color-accent)',
             color: 'var(--color-accent)',
@@ -166,7 +166,7 @@ export function Hero() {
         <a
           href="#contacto"
           onClick={scrollToContact}
-          className="flex items-center gap-2 px-5 py-3 transition-opacity hover:opacity-75"
+          className="cta-blue-hover flex items-center gap-2 px-5 py-3 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
           style={{
             border: '1px solid rgba(20,20,20,0.25)',
             color: 'var(--color-ink)',
