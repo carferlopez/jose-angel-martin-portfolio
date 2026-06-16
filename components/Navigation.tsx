@@ -47,13 +47,16 @@ export function Navigation() {
         href="#"
         onClick={scrollTo('#hero')}
         className="relative block select-none"
-        animate={{ width: scrolled ? 108 : 136, height: scrolled ? 54 : 68 }}
-        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        style={{ textDecoration: 'none' }}
+        style={{
+          width: scrolled ? 108 : 136,
+          height: scrolled ? 54 : 68,
+          textDecoration: 'none',
+          transition: 'width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+        }}
         aria-label="José Ángel Martín — inicio"
       >
         <img
-          src="/media/Logo%20B%3AN/1.svg"
+          src="/media/Logo%20B%3AN/3.svg"
           alt="Záncara OHM"
           className="h-full w-full"
           style={{ objectFit: 'contain', display: 'block' }}
