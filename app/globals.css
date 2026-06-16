@@ -104,6 +104,10 @@
   width: 100%;
 }
 
+.nav-rotring::after {
+  background-color: var(--color-accent);
+}
+
 .cta-blue-hover {
   transition:
     background-color 0.2s ease,
@@ -127,6 +131,12 @@
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   line-height: 0.96;
+}
+
+.highlight-heading-loose {
+  padding-top: 0.015em;
+  padding-bottom: 0.075em;
+  line-height: 1.08;
 }
 
 /* ─── Sello revisión ────────────────────────────────────────── */

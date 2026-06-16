@@ -65,7 +65,7 @@ export function Service() {
               className="font-display"
               style={{ fontSize: 'clamp(2rem, 5vw, 5.5rem)', color: 'var(--color-ink)' }}
             >
-              <span className="highlight-heading">¿Qué es una licencia de actividad?</span>
+              <span className="highlight-heading highlight-heading-loose">¿Qué es una licencia de actividad?</span>
             </h2>
             <p
               className="mt-4 leading-relaxed"

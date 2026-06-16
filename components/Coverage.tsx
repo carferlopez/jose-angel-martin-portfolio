@@ -1,8 +1,6 @@
 'use client'
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
-import { TechnicalPlaceholder } from './TechnicalImage'
 
 const MUNICIPALITIES = [
   { name: 'Pedro Muñoz', highlight: true, note: '(base)' },
@@ -23,9 +21,6 @@ const MUNICIPALITIES = [
 
 export function Coverage() {
   const reduced = useReducedMotion()
-  const imgRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({ target: imgRef, offset: ['start end', 'end start'] })
-  const imgY = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [-30, 30])
 
   return (
     <section
@@ -109,15 +104,20 @@ export function Coverage() {
           </motion.div>
         </div>
 
-        {/* Imagen con parallax */}
+        {/* Mapa */}
         <div
-          ref={imgRef}
           className="relative overflow-hidden"
-          style={{ border: '1px solid rgba(20,20,20,0.15)', minHeight: 320 }}
+          style={{ border: '1px solid rgba(20,20,20,0.15)', minHeight: 360 }}
         >
-          <motion.div className="w-full h-full" style={{ y: imgY }}>
-            <TechnicalPlaceholder label="planta.jpg" className="w-full" style={{ minHeight: 340 }} />
-          </motion.div>
+          <iframe
+            title="Mapa de cobertura en La Mancha"
+            src="https://www.google.com/maps?q=Pedro%20Mu%C3%B1oz%2C%20Alc%C3%A1zar%20de%20San%20Juan%2C%20Campo%20de%20Criptana%2C%20Tomelloso%2C%20Socu%C3%A9llamos%2C%20Argamasilla%20de%20Alba%2C%20Herencia%2C%20Villarta%20de%20San%20Juan%2C%20Arenas%20de%20San%20Juan%2C%20Membrilla%2C%20Mota%20del%20Cuervo%2C%20Las%20Mesas%2C%20El%20Toboso%2C%20Castilla-La%20Mancha&output=embed"
+            className="absolute inset-0 h-full w-full"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
           <div className="cross-mark top-3 left-3" />
           <div className="cross-mark top-3 right-3" />
           <div className="cross-mark bottom-3 left-3" />

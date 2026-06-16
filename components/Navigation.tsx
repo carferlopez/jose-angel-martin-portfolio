@@ -71,7 +71,7 @@ export function Navigation() {
               <a
                 href={link.href}
                 onClick={scrollTo(link.href)}
-                className="rotring"
+                className="rotring nav-rotring"
                 style={{
                   fontFamily: 'var(--font-technical)',
                   fontSize: 11,
