@@ -111,7 +111,7 @@ export function Coverage() {
         >
           <iframe
             title="Mapa de cobertura en La Mancha"
-            src="https://www.google.com/maps?q=Pedro%20Mu%C3%B1oz%2C%20Alc%C3%A1zar%20de%20San%20Juan%2C%20Campo%20de%20Criptana%2C%20Tomelloso%2C%20Socu%C3%A9llamos%2C%20Argamasilla%20de%20Alba%2C%20Herencia%2C%20Villarta%20de%20San%20Juan%2C%20Arenas%20de%20San%20Juan%2C%20Membrilla%2C%20Mota%20del%20Cuervo%2C%20Las%20Mesas%2C%20El%20Toboso%2C%20Castilla-La%20Mancha&output=embed"
+            src="https://www.google.com/maps?hl=es&ll=39.245,-3.135&z=9&output=embed"
             className="absolute inset-0 h-full w-full"
             style={{ border: 0 }}
             loading="lazy"
