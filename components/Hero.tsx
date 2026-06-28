@@ -54,6 +54,7 @@ export function Hero() {
           muted
           playsInline
           preload="metadata"
+          style={{ transform: 'scale(1.33)', transformOrigin: 'center' }}
         />
       </motion.div>
 
