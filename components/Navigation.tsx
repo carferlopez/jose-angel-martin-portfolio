@@ -78,11 +78,11 @@ export function Navigation() {
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   textDecoration: 'none',
-                  color: 'var(--color-ink)',
-                  opacity: 0.7,
                 }}
               >
-                {link.label}
+                <span className="highlight-heading" style={{ padding: '2px 6px', fontSize: 10, color: 'var(--color-paper)' }}>
+                  {link.label}
+                </span>
               </a>
             </li>
           ))}
