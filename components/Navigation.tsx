@@ -56,7 +56,7 @@ export function Navigation() {
         aria-label="Pepe Martín Ramírez — inicio"
       >
         <img
-          src="/media/Logo%20B%3AN/3.svg"
+          src="/media/logo_transparent.png"
           alt="Záncara OHM"
           className="h-full w-full"
           style={{ objectFit: 'contain', display: 'block' }}
