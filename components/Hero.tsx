@@ -20,7 +20,7 @@ export function Hero() {
       >
         <video
           className="h-full w-full object-cover"
-          src="/media/hero_video.mp4"
+          src="/media/hero_video_ok.mp4"
           autoPlay={!reduced}
           muted
           loop
