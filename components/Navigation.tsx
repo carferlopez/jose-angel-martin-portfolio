@@ -3,11 +3,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants'
 
-const NAV_LINKS = [
-  { label: 'Ingeniería', href: '#ingenieria' },
-  { label: 'Consultoría Compras', href: '#compras' },
-  { label: 'Contacto', href: '#contacto' },
-]
+
 
 function PhoneIcon() {
   return (
@@ -63,31 +59,7 @@ export function Navigation() {
         />
       </motion.a>
 
-      {/* Nav links — solo desktop */}
-      <nav className="hidden md:block" aria-label="Navegación principal">
-        <ul className="flex items-center gap-8 list-none">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={scrollTo(link.href)}
-                className="rotring nav-rotring"
-                style={{
-                  fontFamily: 'var(--font-technical)',
-                  fontSize: 11,
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  textDecoration: 'none',
-                }}
-              >
-                <span className="highlight-heading" style={{ padding: '2px 6px', fontSize: 10, color: 'var(--color-paper)' }}>
-                  {link.label}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+
 
       {/* CTAs de contacto rápido */}
       <div className="flex items-center gap-2">
