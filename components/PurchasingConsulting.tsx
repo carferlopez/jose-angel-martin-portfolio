@@ -182,14 +182,18 @@ export function PurchasingConsulting() {
                   </span>
                   <div>
                     <h4
-                      className="font-display mb-1.5 transition-colors"
-                      style={{ fontSize: '1.25rem', color: 'var(--color-ink)' }}
+                      className="font-display mb-2"
+                      style={{
+                        fontSize: '1.25rem',
+                        color: 'var(--color-ink)',
+                        display: 'inline-block',
+                        borderBottom: '1.5px solid var(--color-accent)',
+                        paddingBottom: '2px',
+                      }}
                     >
-                      <span className="highlight-heading !bg-transparent !color-ink group-hover:!bg-accent group-hover:!text-paper transition-colors duration-250 px-1 py-0.5">
-                        {s.title}
-                      </span>
+                      {s.title}
                     </h4>
-                    <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11.5, lineHeight: 1.65, opacity: 0.65 }}>
+                    <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11.5, lineHeight: 1.65, opacity: 0.65, marginTop: '4px' }}>
                       {s.desc}
                     </p>
                   </div>
