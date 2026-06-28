@@ -87,7 +87,7 @@ export function Manifesto() {
             transition={{ duration: 0.9, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
             aria-hidden="true"
           >
-            <span className="highlight-heading">en Pedro Muñoz y comarca</span>
+            <span className="highlight-heading">en la Mancha</span>
           </motion.div>
         </div>
 
