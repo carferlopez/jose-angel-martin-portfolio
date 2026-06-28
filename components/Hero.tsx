@@ -1,9 +1,37 @@
 'use client'
+import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 export function Hero() {
   const reduced = useReducedMotion()
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Replay from the beginning whenever the Hero section is shown
+            video.currentTime = 0
+            video.play().catch((err) => {
+              console.log("Auto-play prevented or failed:", err)
+            })
+          }
+        })
+      },
+      { threshold: 0.15 }
+    )
+
+    observer.observe(video)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
 
   return (
     <section
@@ -19,11 +47,11 @@ export function Hero() {
         aria-hidden="true"
       >
         <video
+          ref={videoRef}
           className="h-full w-full object-cover"
           src="/media/hero_video_ok.mp4"
           autoPlay={!reduced}
           muted
-          loop
           playsInline
           preload="metadata"
         />
@@ -44,10 +72,10 @@ export function Hero() {
       </div>
 
       <a
-        href="#intro"
+        href="#ingenieria"
         onClick={(e) => {
           e.preventDefault()
-          document.querySelector('#intro')?.scrollIntoView({ behavior: 'smooth' })
+          document.querySelector('#ingenieria')?.scrollIntoView({ behavior: 'smooth' })
         }}
         className="absolute right-4 md:right-10 bottom-6 md:bottom-9 flex items-center gap-2 rotring"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--color-paper)', textDecoration: 'none', textShadow: '0 1px 12px rgba(0,0,0,0.45)' }}
