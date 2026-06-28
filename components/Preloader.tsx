@@ -59,10 +59,10 @@ export function Preloader({ onComplete }: PreloaderProps) {
                 className="text-2xl tracking-tighter font-bold"
                 style={{ fontFamily: 'var(--font-display)', color: 'var(--color-paper)' }}
               >
-                JA.
+                PM.
               </span>
               <span className="stamp" style={{ borderColor: 'rgba(237,234,227,0.3)', color: 'rgba(237,234,227,0.5)' }}>
-                INGENIERO INDUSTRIAL
+                INGENIERO TÉCNICO ELÉCTRICO
               </span>
             </div>
 

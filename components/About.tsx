@@ -33,9 +33,9 @@ export function About() {
             style={{ border: '1px solid rgba(20,20,20,0.18)', maxWidth: 420, aspectRatio: '4/5' }}
           >
             <TechnicalImage
-              src="/media/retrato.jpg"
-              alt="Retrato de José Ángel Martín"
-              label="retrato.jpg"
+              src="/media/PepeZancaraOhmPerfil.jpeg"
+              alt="Retrato de Pepe Martín Ramírez"
+              label="PepeZancaraOhmPerfil.jpeg"
               fill
               sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
               style={{ objectFit: 'cover' }}
@@ -49,7 +49,7 @@ export function About() {
               style={{ fontFamily: 'var(--font-technical)', fontSize: 9, color: 'var(--color-accent)', letterSpacing: '0.08em' }}
               aria-hidden="true"
             >
-              retrato.jpg ↗
+              pepe_martin.jpg ↗
             </div>
           </div>
         </motion.div>
@@ -68,29 +68,25 @@ export function About() {
               className="font-display mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 4.5rem)', color: 'var(--color-ink)' }}
             >
-              <span className="highlight-heading">José Ángel Martín</span>
+              <span className="highlight-heading">Pepe Martín Ramírez</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.1em', opacity: 0.45, textTransform: 'uppercase' }}>
-              Ingeniero Industrial Colegiado
+              Ingeniero Técnico especialidad Electricidad
             </p>
           </div>
 
           <p style={{ fontFamily: 'var(--font-technical)', fontSize: 14, lineHeight: 1.78, color: 'var(--color-ink)', opacity: 0.78 }}>
-            Más de doce años proyectando y legalizando actividades en Castilla-La Mancha. Conozco los
-            ayuntamientos de la comarca y los tiempos reales de tramitación. Mi objetivo es que tu negocio
-            abra cuanto antes y sin contratiempos.
+            Ingeniero Técnico especialidad Electricidad con más de 10 años de experiencia técnica en compras en diferentes sectores. Aporto una visión que combina la precisión de la ingeniería y la optimización estratégica.
           </p>
 
           <p style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.75, color: 'var(--color-ink)', opacity: 0.55 }}>
-            Con base en Pedro Muñoz, ofrezco servicio en toda la provincia de Ciudad Real y municipios
-            de provincias limítrofes. Trato directo: yo mismo llevo tu expediente de principio a fin,
-            sin intermediarios.
+            Con base en Pedro Muñoz, ofrezco servicio en toda la comarca de la Mancha. Trato directo y cercano: yo mismo llevo tu expediente de principio a fin, sin intermediarios.
           </p>
 
           <div className="flex flex-wrap gap-2">
-            <span className="stamp">Colegiado C.R.</span>
+            <span className="stamp">Ingeniero Técnico</span>
             <span className="stamp">Pedro Muñoz</span>
-            <span className="stamp">Desde 2013</span>
+            <span className="stamp">+10 años exp.</span>
             <span className="stamp">Trato directo</span>
           </div>
         </motion.div>

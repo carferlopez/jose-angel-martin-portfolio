@@ -203,7 +203,7 @@ export function Contact() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex flex-col gap-1">
             <span style={{ fontFamily: 'var(--font-technical)', fontSize: 11, opacity: 0.55, letterSpacing: '0.08em' }}>
-              JOSÉ ÁNGEL MARTÍN — INGENIERO INDUSTRIAL · PEDRO MUÑOZ, CIUDAD REAL
+              PEPE MARTÍN RAMÍREZ — INGENIERO TÉCNICO · PEDRO MUÑOZ, CIUDAD REAL
             </span>
             <div className="flex items-center gap-4">
               <a href={PHONE_HREF} className="rotring" style={{ fontFamily: 'var(--font-technical)', fontSize: 11, opacity: 0.4, color: 'var(--color-ink)', textDecoration: 'none' }}>

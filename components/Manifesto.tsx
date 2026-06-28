@@ -30,7 +30,7 @@ export function Manifesto() {
 
   return (
     <section
-      id="intro"
+      id="ingenieria"
       className="relative flex flex-col justify-start md:justify-end pt-32 pb-14 md:py-20 md:min-h-screen px-4 md:px-10 border-b overflow-hidden"
       style={{ borderColor: 'rgba(20,20,20,0.08)' }}
       aria-labelledby="intro-heading"
@@ -50,7 +50,7 @@ export function Manifesto() {
       >
         <span>FECHA: 2026.06</span>
         <span>NORMATIVA: CTE · REBT</span>
-        <span>ÁMBITO: C.R. + COMARCA</span>
+        <span>ÁMBITO: LA MANCHA</span>
       </div>
 
       <motion.div
@@ -126,8 +126,8 @@ export function Manifesto() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: reduced ? 0 : 0.55 }}
         >
-          Ingeniero industrial colegiado. Tramito tu expediente de principio a fin ante el Ayuntamiento y la Junta de Comunidades.{' '}
-          <span style={{ opacity: 0.6 }}>Sin colas, sin burocracia, sin sorpresas.</span>
+          Ingeniero Técnico Eléctrico. Tramito tu expediente de principio a fin ante el Ayuntamiento.{' '}
+          <span style={{ opacity: 0.6 }}>Sin colas, me ocupo de la burocracia, sin sorpresas.</span>
         </motion.p>
 
         <motion.div

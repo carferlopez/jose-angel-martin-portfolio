@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants'
 
 const NAV_LINKS = [
-  { label: 'Servicio', href: '#servicio' },
-  { label: 'Cómo trabajo', href: '#proceso' },
+  { label: 'Ingeniería', href: '#ingenieria' },
+  { label: 'Consultoría Compras', href: '#compras' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
@@ -53,7 +53,7 @@ export function Navigation() {
           textDecoration: 'none',
           transition: 'width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
-        aria-label="José Ángel Martín — inicio"
+        aria-label="Pepe Martín Ramírez — inicio"
       >
         <img
           src="/media/Logo%20B%3AN/3.svg"

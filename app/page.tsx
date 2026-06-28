@@ -4,10 +4,11 @@ import { Navigation } from '@/components/Navigation'
 import { Hero } from '@/components/Hero'
 import { Manifesto } from '@/components/Manifesto'
 import { Service } from '@/components/Service'
-import { Process } from '@/components/Process'
+// import { Process } from '@/components/Process' // FOLD de momento
+import { OtherServices } from '@/components/OtherServices'
+import { PurchasingConsulting } from '@/components/PurchasingConsulting'
 import { Coverage } from '@/components/Coverage'
 import { About } from '@/components/About'
-import { OtherServices } from '@/components/OtherServices'
 import { Faq } from '@/components/Faq'
 import { Contact } from '@/components/Contact'
 
@@ -20,10 +21,10 @@ export default function Home() {
         <Hero />
         <Manifesto />
         <Service />
-        <Process />
+        <OtherServices />
+        <PurchasingConsulting />
         <Coverage />
         <About />
-        <OtherServices />
         <Faq />
         <Contact />
       </main>

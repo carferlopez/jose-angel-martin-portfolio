@@ -18,25 +18,26 @@ const barlowCondensed = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  title: 'Licencias de Actividad en Pedro Muñoz — José Ángel Martín, Ingeniero Industrial',
+  title: 'Ingeniería y Consultoría de Compras — Pepe Martín Ramírez',
   description:
-    'Ingeniero industrial colegiado en Pedro Muñoz (Ciudad Real). Tramitación de licencias de actividad, proyectos de energía solar, baja tensión y puntos de recarga VE en Castilla-La Mancha.',
+    'Pepe Martín Ramírez, Ingeniero Técnico Eléctrico y Consultor de Compras. Licencias de actividad, proyectos eléctricos, eficiencia energética y optimización de compras en Pedro Muñoz, La Mancha y toda España.',
   keywords: [
     'licencia de actividad Pedro Muñoz',
     'licencia de apertura Ciudad Real',
-    'ingeniero industrial Pedro Muñoz',
-    'licencia actividad Castilla La Mancha',
-    'declaración responsable apertura',
-    'licencia apertura Alcázar de San Juan',
-    'licencia apertura Tomelloso',
-    'licencia apertura Campo de Criptana',
-    'energía solar Pedro Muñoz',
-    'instalación fotovoltaica Ciudad Real',
+    'ingeniero técnico eléctrico',
+    'consultoría de compras',
+    'optimización de compras',
+    'reducción de costes compras',
+    'sourcing de proveedores',
+    'interim management compras',
+    'licencia apertura La Mancha',
+    'instalación fotovoltaica Pedro Muñoz',
+    'puntos de recarga vehículo eléctrico',
   ],
-  authors: [{ name: 'José Ángel Martín' }],
+  authors: [{ name: 'Pepe Martín Ramírez' }],
   openGraph: {
-    title: 'Licencias de Actividad en Pedro Muñoz — José Ángel Martín',
-    description: 'Tramitación integral de licencias de actividad en Pedro Muñoz y comarca (Ciudad Real). Ingeniero industrial colegiado.',
+    title: 'Ingeniería y Consultoría de Compras — Pepe Martín Ramírez',
+    description: 'Pepe Martín Ramírez, Ingeniero Técnico Eléctrico y Consultor de Compras. Licencias de actividad, proyectos de instalaciones y dirección de compras.',
     type: 'website',
     locale: 'es_ES',
     url: SITE_URL,
@@ -54,9 +55,9 @@ export const viewport: Viewport = {
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'José Ángel Martín — Ingeniero Industrial',
+  name: 'Pepe Martín Ramírez — Záncara Ohm',
   description:
-    'Ingeniero industrial colegiado especializado en licencias de actividad en Pedro Muñoz y comarca (Ciudad Real, Castilla-La Mancha). También: energía solar, baja tensión, puntos de recarga VE.',
+    'Pepe Martín Ramírez, Ingeniero Técnico Eléctrico y Consultor de Compras con base en Pedro Muñoz (Ciudad Real). Licencias de actividad, proyectos eléctricos, autoconsumo fotovoltaico y optimización de departamentos de compras.',
   url: SITE_URL,
   telephone: `+${PHONE_RAW}`,
   email: EMAIL,
@@ -69,8 +70,8 @@ const localBusinessJsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '39.4167',
-    longitude: '-2.9500',
+    latitude: '39.4011',
+    longitude: '-2.9519',
   },
   areaServed: [
     'Pedro Muñoz',
@@ -81,7 +82,8 @@ const localBusinessJsonLd = {
     'Argamasilla de Alba',
     'Herencia',
     'Mota del Cuervo',
-    'Ciudad Real',
+    'Castilla-La Mancha',
+    'España',
   ],
   priceRange: '€€',
   openingHoursSpecification: {
@@ -92,7 +94,7 @@ const localBusinessJsonLd = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Servicios de ingeniería industrial',
+    name: 'Servicios de Ingeniería y Consultoría de Compras',
     itemListElement: [
       {
         '@type': 'Offer',
@@ -100,15 +102,15 @@ const localBusinessJsonLd = {
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Declaración responsable de apertura' },
+        itemOffered: { '@type': 'Service', name: 'Proyectos eléctricos de baja tensión y fotovoltaica' },
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Instalaciones solares fotovoltaicas' },
+        itemOffered: { '@type': 'Service', name: 'Consultoría y optimización de departamentos de compras' },
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Proyectos de baja tensión' },
+        itemOffered: { '@type': 'Service', name: 'Dirección de compras externa (Interim Management)' },
       },
     ],
   },
