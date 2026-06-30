@@ -49,7 +49,7 @@ export function Hero() {
         <video
           ref={videoRef}
           className="h-full w-full object-cover"
-          src="/media/hero_video_ok.mp4"
+          src="/media/hero_video_0628.mp4"
           autoPlay={!reduced}
           muted
           playsInline
