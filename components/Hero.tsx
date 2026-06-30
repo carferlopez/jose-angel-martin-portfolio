@@ -36,7 +36,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden"
+      className="relative w-full aspect-video md:h-screen md:min-h-screen overflow-hidden bg-paper"
       aria-label="Video de presentación"
     >
       <motion.div
@@ -48,13 +48,12 @@ export function Hero() {
       >
         <video
           ref={videoRef}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain bg-paper"
           src="/media/hero_video_0628.mp4"
           autoPlay={!reduced}
           muted
           playsInline
           preload="metadata"
-          style={{ transform: 'scale(1.33)', transformOrigin: 'center' }}
         />
       </motion.div>
 
@@ -66,7 +65,7 @@ export function Hero() {
 
       <div
         className="absolute left-4 md:left-10 bottom-8 md:bottom-10"
-        style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--color-paper)', textShadow: '0 1px 12px rgba(0,0,0,0.45)' }}
+        style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--color-ink)' }}
         aria-hidden="true"
       >
         00.0 — VIDEO HERO
@@ -79,7 +78,7 @@ export function Hero() {
           document.querySelector('#ingenieria')?.scrollIntoView({ behavior: 'smooth' })
         }}
         className="absolute right-4 md:right-10 bottom-6 md:bottom-9 flex items-center gap-2 rotring"
-        style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--color-paper)', textDecoration: 'none', textShadow: '0 1px 12px rgba(0,0,0,0.45)' }}
+        style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--color-ink)', textDecoration: 'none' }}
       >
         VER SERVICIO
         <motion.span
