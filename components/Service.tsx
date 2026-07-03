@@ -76,48 +76,6 @@ export function Service() {
               Es obligatoria para abrir cualquier negocio en España.
             </p>
           </FadeIn>
-
-          {/* Dos tipos */}
-          <FadeIn delay={0.08}>
-            <div className="grid grid-cols-2 gap-4">
-              <div style={{ border: '1px solid rgba(20,20,20,0.12)', padding: '1rem' }}>
-                <div
-                  className="mb-2"
-                  style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--color-accent)', opacity: 0.9 }}
-                >
-                  // TIPO A
-                </div>
-                <div
-                  className="font-display mb-2"
-                  style={{ fontSize: '1.3rem', color: 'var(--color-ink)' }}
-                >
-                  Declaración responsable
-                </div>
-                <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, lineHeight: 1.65, opacity: 0.65 }}>
-                  Para actividades de bajo impacto. Apertura inmediata en el momento de la presentación.
-                  El titular asume el cumplimiento de los requisitos.
-                </p>
-              </div>
-              <div style={{ border: '1px solid rgba(20,20,20,0.12)', padding: '1rem' }}>
-                <div
-                  className="mb-2"
-                  style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--color-accent)', opacity: 0.9 }}
-                >
-                  // TIPO B
-                </div>
-                <div
-                  className="font-display mb-2"
-                  style={{ fontSize: '1.3rem', color: 'var(--color-ink)' }}
-                >
-                  Licencia de actividad
-                </div>
-                <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, lineHeight: 1.65, opacity: 0.65 }}>
-                  Para actividades de mayor impacto o superficie. Requiere proyecto técnico e informe
-                  municipal previo a la apertura.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
         </div>
 
         {/* Columna derecha */}
