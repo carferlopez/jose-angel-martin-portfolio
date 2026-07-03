@@ -63,14 +63,6 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div
-        className="absolute left-4 md:left-10 bottom-8 md:bottom-10"
-        style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--color-ink)' }}
-        aria-hidden="true"
-      >
-        00.0 — VIDEO HERO
-      </div>
-
       <a
         href="#ingenieria"
         onClick={(e) => {

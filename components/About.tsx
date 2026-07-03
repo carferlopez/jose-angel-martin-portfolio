@@ -33,9 +33,9 @@ export function About() {
             style={{ border: '1px solid rgba(20,20,20,0.18)', maxWidth: 420, aspectRatio: '4/5' }}
           >
             <TechnicalImage
-              src="/media/PepeZancaraOhmPerfil.jpeg"
+              src="/media/pepe_profile_meme.jpg"
               alt="Retrato de Pepe Martín Ramírez"
-              label="PepeZancaraOhmPerfil.jpeg"
+              label="pepe_profile_meme.jpg"
               fill
               sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
               style={{ objectFit: 'cover' }}
@@ -49,7 +49,7 @@ export function About() {
               style={{ fontFamily: 'var(--font-technical)', fontSize: 9, color: 'var(--color-accent)', letterSpacing: '0.08em' }}
               aria-hidden="true"
             >
-              pepe_martin.jpg ↗
+              pepe_profile_meme.jpg ↗
             </div>
           </div>
         </motion.div>
