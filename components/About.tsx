@@ -29,8 +29,8 @@ export function About() {
           transition={{ duration: 0.6 }}
         >
           <div
-            className="relative overflow-hidden"
-            style={{ border: '1px solid rgba(20,20,20,0.18)', maxWidth: 420, aspectRatio: '4/5' }}
+            className="relative overflow-hidden bg-white"
+            style={{ border: '1px solid rgba(20,20,20,0.18)', maxWidth: 420, aspectRatio: '500/561' }}
           >
             <TechnicalImage
               src="/media/pepe_profile_meme.jpg"
@@ -38,7 +38,7 @@ export function About() {
               label="pepe_profile_meme.jpg"
               fill
               sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'contain' }}
             />
             <div className="cross-mark top-3 left-3" />
             <div className="cross-mark top-3 right-3" />
