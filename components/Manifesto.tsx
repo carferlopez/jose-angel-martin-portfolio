@@ -74,7 +74,7 @@ export function Manifesto() {
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
           >
-            <span className="highlight-heading">Licencias de actividad</span>
+            <span className="highlight-heading">Consultoría de Compras</span>
           </motion.h1>
         </div>
         <div className="overflow-hidden mb-8">
@@ -87,7 +87,7 @@ export function Manifesto() {
             transition={{ duration: 0.9, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
             aria-hidden="true"
           >
-            <span className="highlight-heading">en la Mancha</span>
+            <span className="highlight-heading">e Ingeniería Eléctrica</span>
           </motion.div>
         </div>
 
