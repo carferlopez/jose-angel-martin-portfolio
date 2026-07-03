@@ -93,7 +93,7 @@ export function PurchasingConsulting() {
               className="mt-6 leading-relaxed"
               style={{ fontFamily: 'var(--font-technical)', fontSize: 14, lineHeight: 1.75, opacity: 0.8 }}
             >
-              Soy consultor especializado en Dirección de Compras con un Máster en Dirección de Compras por la UDIMA y más de 10 años de experiencia en sectores exigentes como Automoción, Bienes de Consumo, Retail y Energías Renovables. Ayudo a empresas de Castilla-La Mancha y toda España a optimizar su función de compras, reducir costes de manera sostenible y mejorar su competitividad.
+              Soy consultor especializado con un Máster en Dirección de Compras por la UDIMA y más de 10 años de experiencia en sectores exigentes como Automoción, Bienes de Consumo y Retail. Ayudo a empresas de Castilla-La Mancha y toda España a optimizar su función de compras, reducir costes de manera sostenible y mejorar su competitividad.
             </p>
           </FadeIn>
 
