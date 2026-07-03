@@ -71,12 +71,12 @@ export function About() {
               <span className="highlight-heading">Pepe Martín Ramírez</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.1em', opacity: 0.45, textTransform: 'uppercase' }}>
-              Ingeniero Técnico especialidad Electricidad
+              Ingeniero Técnico Eléctrico
             </p>
           </div>
 
           <p style={{ fontFamily: 'var(--font-technical)', fontSize: 14, lineHeight: 1.78, color: 'var(--color-ink)', opacity: 0.78 }}>
-            Ingeniero Técnico especialidad Electricidad con más de 10 años de experiencia técnica en compras en diferentes sectores. Aporto una visión que combina la precisión de la ingeniería y la optimización estratégica.
+            Ingeniero Técnico Eléctrico con más de 10 años de experiencia técnica en compras en diferentes sectores. Aporto una visión que combina la precisión de la ingeniería y la optimización estratégica.
           </p>
 
           <p style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.75, color: 'var(--color-ink)', opacity: 0.55 }}>
