@@ -120,16 +120,7 @@ export function Contact() {
             </a>
           </div>
 
-          {/* Horario */}
-          <div>
-            <div style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.15em', opacity: 0.4, marginBottom: 6 }}>
-              // HORARIO
-            </div>
-            <p style={{ fontFamily: 'var(--font-technical)', fontSize: 12, lineHeight: 1.7, opacity: 0.6 }}>
-              Lunes a viernes, 9:00–18:00<br />
-              Fuera de horario: deja un mensaje y te respondo.
-            </p>
-          </div>
+
         </div>
 
         {/* Columna derecha: formulario */}
