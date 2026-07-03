@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 const MUNICIPALITIES = [
-  { name: 'Pedro Muñoz', highlight: true, note: '(base)' },
+  { name: 'Pedro Muñoz', highlight: true },
   { name: 'Alcázar de San Juan', highlight: false },
   { name: 'Campo de Criptana', highlight: false },
   { name: 'Tomelloso', highlight: false },
@@ -16,6 +16,7 @@ const MUNICIPALITIES = [
   { name: 'Mota del Cuervo', highlight: false, note: '(Cuenca)' },
   { name: 'Las Mesas', highlight: false, note: '(Cuenca)' },
   { name: 'El Toboso', highlight: false, note: '(Toledo)' },
+  { name: 'Albacete', highlight: false, note: '(consultar)' },
   { name: 'Resto de C. Real', highlight: false, note: '(consultar)' },
 ]
 
