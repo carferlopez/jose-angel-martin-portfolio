@@ -111,7 +111,7 @@ export function PurchasingConsulting() {
                 // ¿POR QUÉ TRABAJAR CONMIGO?
               </div>
               <p style={{ fontFamily: 'var(--font-technical)', fontSize: 12, lineHeight: 1.7, opacity: 0.72 }}>
-                Con experiencia real en automoción, retail, bienes de consumo y energías renovables, entiendo los retos específicos de cada sector y aporto soluciones probadas, no teorías. Mi enfoque es eminentemente práctico, orientado a resultados tangibles y adaptado a la realidad operativa de las empresas.
+                Ayudo a tu empresa a mejorar y optimizar los procesos de compra. Con experiencia real en automoción, retail, bienes de consumo y energías renovables, entiendo los retos específicos de cada sector y aporto soluciones probadas, no teorías. Mi enfoque es eminentemente práctico, orientado a resultados tangibles y adaptado a la realidad operativa de las empresas. Además, poseo gran experiencia en mercados asiáticos.
               </p>
             </div>
           </FadeIn>
