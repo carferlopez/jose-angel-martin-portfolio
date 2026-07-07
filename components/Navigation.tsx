@@ -52,7 +52,7 @@ export function Navigation() {
         aria-label="Pepe Martín Ramírez — inicio"
       >
         <img
-          src="/media/logo_zancara_ohm_text.png"
+          src={scrolled ? "/media/logo_zancara_ohm_text_black.png" : "/media/logo_zancara_ohm_white_icon_blue_text.png"}
           alt="Záncara OHM"
           className="h-full w-full"
           style={{ objectFit: 'contain', display: 'block' }}
@@ -68,12 +68,13 @@ export function Navigation() {
           href={PHONE_HREF}
           className="cta-blue-hover flex items-center gap-2 px-3 py-1.5 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
           style={{
-            border: '1px solid rgba(20,20,20,0.3)',
-            color: 'var(--color-ink)',
+            border: scrolled ? '1px solid rgba(20,20,20,0.3)' : '1px solid rgba(255,255,255,0.45)',
+            color: scrolled ? 'var(--color-ink)' : 'var(--color-paper)',
             fontFamily: 'var(--font-technical)',
             fontSize: 11,
             letterSpacing: '0.06em',
             textDecoration: 'none',
+            transition: 'border-color 0.3s ease, color 0.3s ease',
           }}
           aria-label={`Llamar al ${PHONE_DISPLAY}`}
         >
