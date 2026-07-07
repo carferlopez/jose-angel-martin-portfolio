@@ -44,15 +44,15 @@ export function Navigation() {
         onClick={scrollTo('#hero')}
         className="relative block select-none"
         style={{
-          width: scrolled ? 60 : 76,
-          height: scrolled ? 60 : 76,
+          width: scrolled ? 66 : 84,
+          height: scrolled ? 66 : 84,
           textDecoration: 'none',
           transition: 'width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
         aria-label="Pepe Martín Ramírez — inicio"
       >
         <img
-          src={scrolled ? "/media/logo_zancara_ohm_square_black.png" : "/media/logo_zancara_ohm_square_all_white.png"}
+          src={scrolled ? "/media/logo_zancara_ohm_square_black.png?v=2" : "/media/logo_zancara_ohm_square_all_white.png?v=2"}
           alt="Záncara OHM"
           className="h-full w-full"
           style={{ objectFit: 'contain', display: 'block' }}

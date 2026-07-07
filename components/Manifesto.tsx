@@ -64,7 +64,7 @@ export function Manifesto() {
       />
 
       <div className="relative z-10">
-        <div className="overflow-hidden mb-4">
+        <div className="overflow-hidden mb-8">
           <motion.h1
             id="intro-heading"
             className="font-display"
@@ -75,20 +75,9 @@ export function Manifesto() {
             transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
           >
             <span className="highlight-heading">Consultoría de Compras</span>
-          </motion.h1>
-        </div>
-        <div className="overflow-hidden mb-8">
-          <motion.div
-            className="font-display"
-            style={{ fontSize: 'clamp(3rem, 10vw, 11rem)' }}
-            initial={reduced ? undefined : { clipPath: 'inset(0 100% 0 0)' }}
-            whileInView={reduced ? undefined : { clipPath: 'inset(0 0% 0 0)' }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
-            aria-hidden="true"
-          >
+            <br />
             <span className="highlight-heading">e Ingeniería Eléctrica</span>
-          </motion.div>
+          </motion.h1>
         </div>
 
         <motion.div
