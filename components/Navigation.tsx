@@ -44,8 +44,8 @@ export function Navigation() {
         onClick={scrollTo('#hero')}
         className="relative block select-none"
         style={{
-          width: scrolled ? 54 : 68,
-          height: scrolled ? 54 : 68,
+          width: scrolled ? 60 : 76,
+          height: scrolled ? 60 : 76,
           textDecoration: 'none',
           transition: 'width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
