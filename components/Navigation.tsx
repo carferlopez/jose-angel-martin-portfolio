@@ -44,7 +44,7 @@ export function Navigation() {
         onClick={scrollTo('#hero')}
         className="relative block select-none"
         style={{
-          width: scrolled ? 108 : 136,
+          width: scrolled ? 54 : 68,
           height: scrolled ? 54 : 68,
           textDecoration: 'none',
           transition: 'width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -52,7 +52,7 @@ export function Navigation() {
         aria-label="Pepe Martín Ramírez — inicio"
       >
         <img
-          src={scrolled ? "/media/logo_zancara_ohm_text_black.png" : "/media/logo_zancara_ohm_white_icon_blue_text.png"}
+          src={scrolled ? "/media/logo_zancara_ohm_square_black.png" : "/media/logo_zancara_ohm_square_blue_icon_white_text.png"}
           alt="Záncara OHM"
           className="h-full w-full"
           style={{ objectFit: 'contain', display: 'block' }}
