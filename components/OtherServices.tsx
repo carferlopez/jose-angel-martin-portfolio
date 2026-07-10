@@ -34,7 +34,7 @@ export function OtherServices() {
     >
 
 
-      <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
+      <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
         <motion.h2
           id="other-services-heading"
           className="font-display shrink-0"
