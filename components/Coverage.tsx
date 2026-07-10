@@ -87,12 +87,12 @@ export function Coverage() {
                   style={{
                     fontFamily: 'var(--font-technical)',
                     fontSize: 11,
-                    color: m.highlight ? 'var(--color-accent)' : 'var(--color-ink)',
+                    color: m.highlight ? 'var(--color-accent-orange)' : 'var(--color-ink)',
                     opacity: m.highlight ? 1 : 0.7,
                   }}
                 >
                   <span
-                    style={{ width: 12, height: 1, backgroundColor: m.highlight ? 'var(--color-accent)' : 'currentColor', opacity: 0.5, flexShrink: 0 }}
+                    style={{ width: 12, height: 1, backgroundColor: m.highlight ? 'var(--color-accent-orange)' : 'currentColor', opacity: 0.5, flexShrink: 0 }}
                     aria-hidden="true"
                   />
                   {m.name}
