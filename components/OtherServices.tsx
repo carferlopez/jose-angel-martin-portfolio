@@ -29,14 +29,7 @@ export function OtherServices() {
       style={{ borderColor: 'rgba(20,20,20,0.08)' }}
       aria-labelledby="other-services-heading"
     >
-      {/* Número sección */}
-      <div
-        className="mb-8 section-number"
-        style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
-        aria-hidden="true"
-      >
-        05.0 — TAMBIÉN
-      </div>
+
 
       <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
         <motion.h2
