@@ -28,7 +28,7 @@ export function OtherServices() {
   return (
     <section
       id="otros-servicios"
-      className="relative py-20 md:py-32 px-4 md:px-10 border-t"
+      className="relative py-12 md:py-20 px-4 md:px-10 border-t"
       style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="other-services-heading"
     >

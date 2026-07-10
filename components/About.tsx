@@ -8,7 +8,7 @@ export function About() {
   return (
     <section
       id="sobre-mi"
-      className="relative py-20 md:py-36 px-4 md:px-10 border-t"
+      className="relative py-12 md:py-20 px-4 md:px-10 border-t"
       style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="about-heading"
     >
