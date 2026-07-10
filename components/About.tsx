@@ -27,23 +27,30 @@ export function About() {
           whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="w-full max-w-[460px]"
         >
-          <div style={{ border: '1px solid var(--color-accent-orange)', padding: '2rem', position: 'relative' }} className="bg-white">
+          <div
+            className="relative overflow-hidden bg-white"
+            style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
+          >
+            <TechnicalImage
+              src="/media/pepe_profile.jpeg"
+              alt="Retrato de Pepe Martín Ramírez"
+              label="pepe_profile.jpeg"
+              fill
+              sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
+              style={{ objectFit: 'cover' }}
+            />
             <div className="cross-mark cross-mark-orange top-3 left-3" />
             <div className="cross-mark cross-mark-orange top-3 right-3" />
             <div className="cross-mark cross-mark-orange bottom-3 left-3" />
             <div className="cross-mark cross-mark-orange bottom-3 right-3" />
-            
             <div
-              className="mb-4"
-              style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.15em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
+              className="absolute bottom-3 right-3"
+              style={{ fontFamily: 'var(--font-technical)', fontSize: 9, color: 'var(--color-accent-orange)', letterSpacing: '0.08em' }}
+              aria-hidden="true"
             >
-              // ¿POR QUÉ TRABAJAR CONMIGO?
+              pepe_profile.jpeg ↗
             </div>
-            <p style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.7, opacity: 0.72 }}>
-              Está feo que lo diga yo, pero ayudo a tu empresa a mejorar y optimizar los procesos de compra. Con experiencia real en automoción, retail, bienes de consumo y energías renovables, entiendo los retos específicos de cada sector y aporto soluciones probadas, no teorías. Mi enfoque es eminentemente práctico, orientado a resultados tangibles y adaptado a la realidad operativa de las empresas. Además, poseo gran experiencia en mercados asiáticos.
-            </p>
           </div>
         </motion.div>
 
@@ -76,11 +83,30 @@ export function About() {
             Con base en Pedro Muñoz, ofrezco servicio en toda la comarca de la Mancha. Trato directo y cercano: yo mismo llevo tu expediente de principio a fin, sin intermediarios.
           </p>
 
-          <div className="flex flex-wrap gap-2">
-            <span className="stamp">Ingeniero Técnico</span>
-            <span className="stamp">Pedro Muñoz</span>
-            <span className="stamp">+10 años exp.</span>
-            <span className="stamp">Trato directo</span>
+          <div>
+            <div className="flex flex-wrap gap-2 mb-6">
+              <span className="stamp">Ingeniero Técnico</span>
+              <span className="stamp">Pedro Muñoz</span>
+              <span className="stamp">+10 años exp.</span>
+              <span className="stamp">Trato directo</span>
+            </div>
+
+            <div style={{ border: '1px solid var(--color-accent-orange)', padding: '1.75rem', position: 'relative' }} className="bg-white">
+              <div className="cross-mark cross-mark-orange top-3 left-3" />
+              <div className="cross-mark cross-mark-orange top-3 right-3" />
+              <div className="cross-mark cross-mark-orange bottom-3 left-3" />
+              <div className="cross-mark cross-mark-orange bottom-3 right-3" />
+              
+              <div
+                className="mb-3"
+                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
+              >
+                // ¿POR QUÉ TRABAJAR CONMIGO?
+              </div>
+              <p style={{ fontFamily: 'var(--font-technical)', fontSize: 12.5, lineHeight: 1.7, opacity: 0.72 }}>
+                Está feo que lo diga yo, pero ayudo a tu empresa a mejorar y optimizar los procesos de compra. Con experiencia real en automoción, retail, bienes de consumo y energías renovables, entiendo los retos específicos de cada sector y aporto soluciones probadas, no teorías. Mi enfoque es eminentemente práctico, orientado a resultados tangibles y adaptado a la realidad operativa de las empresas. Además, poseo gran experiencia en mercados asiáticos.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
