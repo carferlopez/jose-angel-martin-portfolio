@@ -215,3 +215,12 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ─── Mobile CTA Filled Orange ───────────────────────────────── */
+@media (max-width: 767px) {
+  .mobile-cta-filled-orange {
+    background-color: var(--color-accent-orange) !important;
+    color: var(--color-paper) !important;
+    border-color: var(--color-accent-orange) !important;
+  }
+}

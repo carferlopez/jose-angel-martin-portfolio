@@ -106,7 +106,7 @@ export function Manifesto() {
         >
           <a
             href={PHONE_HREF}
-            className="cta-orange-hover flex items-center gap-2 px-5 py-3 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
+            className="cta-orange-hover mobile-cta-filled-orange flex items-center gap-2 px-5 py-3 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
               border: '1px solid var(--color-accent-orange)',
               color: 'var(--color-accent-orange)',

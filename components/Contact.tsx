@@ -62,7 +62,7 @@ export function Contact() {
         <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
           <a
             href={PHONE_HREF}
-            className="cta-orange-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
+            className="cta-orange-hover mobile-cta-filled-orange flex items-center justify-center gap-3 py-4 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
               border: '2px solid var(--color-accent-orange)',
               color: 'var(--color-accent-orange)',
