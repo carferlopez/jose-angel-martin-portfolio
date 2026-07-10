@@ -125,6 +125,21 @@
   opacity: 1 !important;
 }
 
+.cta-orange-hover {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+.cta-orange-hover:hover,
+.cta-orange-hover:focus-visible {
+  background-color: var(--color-accent-orange) !important;
+  border-color: var(--color-accent-orange) !important;
+  color: var(--color-paper) !important;
+  opacity: 1 !important;
+}
+
 .highlight-heading {
   display: inline;
   padding: 0 0.045em 0.045em;
