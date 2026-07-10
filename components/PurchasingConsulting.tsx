@@ -64,7 +64,7 @@ export function PurchasingConsulting() {
     <section
       id="compras"
       className="relative py-20 md:py-36 px-4 md:px-10 border-t"
-      style={{ borderColor: 'rgba(20,20,20,0.08)' }}
+      style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="compras-heading"
     >
       {/* Número sección */}

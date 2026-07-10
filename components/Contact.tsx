@@ -63,7 +63,7 @@ export function Contact() {
             href={PHONE_HREF}
             className="cta-blue-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
-              border: '2px solid var(--color-ink)',
+              border: '2px solid var(--color-accent)',
               color: 'var(--color-ink)',
               fontFamily: 'var(--font-technical)',
               fontSize: 13,
@@ -81,7 +81,7 @@ export function Contact() {
             href={`mailto:${EMAIL}`}
             className="cta-blue-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
-              border: '2px solid var(--color-ink)',
+              border: '2px solid var(--color-accent)',
               color: 'var(--color-ink)',
               fontFamily: 'var(--font-technical)',
               fontSize: 13,
@@ -98,7 +98,7 @@ export function Contact() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-24 pt-8 border-t" style={{ borderColor: 'rgba(20,20,20,0.1)' }}>
+      <footer className="mt-24 pt-8 border-t" style={{ borderColor: 'var(--color-section-border)' }}>
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex flex-col gap-1">
             <span style={{ fontFamily: 'var(--font-technical)', fontSize: 11, opacity: 0.55, letterSpacing: '0.08em' }}>

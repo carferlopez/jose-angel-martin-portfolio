@@ -51,7 +51,7 @@ function FaqItem({ faq, index }: { faq: (typeof FAQS)[0]; index: number }) {
   return (
     <motion.div
       className="border-t"
-      style={{ borderColor: 'rgba(20,20,20,0.1)' }}
+      style={{ borderColor: 'var(--color-section-border)' }}
       initial={reduced ? undefined : { opacity: 0, y: 10 }}
       whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
@@ -139,7 +139,7 @@ export function Faq() {
             <FaqItem key={i} faq={faq} index={i} />
           ))}
           {/* Último borde */}
-          <div className="border-t" style={{ borderColor: 'rgba(20,20,20,0.1)' }} />
+          <div className="border-t" style={{ borderColor: 'var(--color-section-border)' }} />
         </div>
       </div>
     </section>

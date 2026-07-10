@@ -3,8 +3,9 @@
 @theme {
   --color-paper: #FFFFFF;
   --color-ink: #141414;
-  --color-accent: #2240C9;
-  --color-accent-10: rgba(34, 64, 201, 0.1);
+  --color-accent: #FF751F;
+  --color-accent-10: rgba(255, 117, 31, 0.1);
+  --color-section-border: rgba(255, 117, 31, 0.18);
   --color-ink-40: rgba(20, 20, 20, 0.4);
   --color-ink-20: rgba(20, 20, 20, 0.2);
   --color-ink-10: rgba(20, 20, 20, 0.1);

@@ -32,7 +32,7 @@ export function Manifesto() {
     <section
       id="ingenieria"
       className="relative flex flex-col justify-start md:justify-end pt-32 pb-14 md:py-20 md:min-h-screen px-4 md:px-10 border-b overflow-hidden"
-      style={{ borderColor: 'rgba(20,20,20,0.08)' }}
+      style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="intro-heading"
     >
       <div
