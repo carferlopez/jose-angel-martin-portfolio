@@ -151,6 +151,12 @@
   text-transform: uppercase;
 }
 
+/* ─── Epígrafes / Números de Sección ───────────────────────── */
+.section-number {
+  color: #FF751F !important;
+  opacity: 0.85 !important;
+}
+
 /* ─── Cruces de registro ────────────────────────────────────── */
 .cross-mark {
   position: absolute;

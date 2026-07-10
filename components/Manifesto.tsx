@@ -36,7 +36,7 @@ export function Manifesto() {
       aria-labelledby="intro-heading"
     >
       <div
-        className="absolute top-28 left-4 md:left-10 opacity-30"
+        className="absolute top-28 left-4 md:left-10 section-number"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em' }}
         aria-hidden="true"
       >

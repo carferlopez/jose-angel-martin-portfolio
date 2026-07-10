@@ -117,7 +117,7 @@ export function Faq() {
 
       {/* Número sección */}
       <div
-        className="mb-10 opacity-30"
+        className="mb-10 section-number"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
         aria-hidden="true"
       >

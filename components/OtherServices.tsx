@@ -31,7 +31,7 @@ export function OtherServices() {
     >
       {/* Número sección */}
       <div
-        className="mb-8 opacity-30"
+        className="mb-8 section-number"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
         aria-hidden="true"
       >

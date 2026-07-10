@@ -47,8 +47,8 @@ export function Process() {
       <div className="relative z-10">
         {/* Número sección */}
         <div
-          className="mb-10 opacity-30"
-          style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em', color: 'var(--color-paper)' }}
+          className="mb-10 section-number"
+          style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
           aria-hidden="true"
         >
           02.0 — CÓMO TRABAJO
