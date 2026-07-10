@@ -13,9 +13,9 @@ const MUNICIPALITIES = [
   { name: 'Villarta de San Juan', highlight: false },
   { name: 'Arenas de San Juan', highlight: false },
   { name: 'Membrilla', highlight: false },
-  { name: 'Mota del Cuervo', highlight: false, note: '(Cuenca)' },
-  { name: 'Las Mesas', highlight: false, note: '(Cuenca)' },
-  { name: 'El Toboso', highlight: false, note: '(Toledo)' },
+  { name: 'Mota del Cuervo', highlight: false },
+  { name: 'Las Mesas', highlight: false },
+  { name: 'El Toboso', highlight: false },
   { name: 'Albacete', highlight: false, note: '(consultar)' },
   { name: 'Resto de C. Real', highlight: false, note: '(consultar)' },
 ]
