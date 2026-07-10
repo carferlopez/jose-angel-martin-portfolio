@@ -3,8 +3,9 @@
 @theme {
   --color-paper: #FFFFFF;
   --color-ink: #141414;
-  --color-accent: #FF751F;
-  --color-accent-10: rgba(255, 117, 31, 0.1);
+  --color-accent: #2240C9;
+  --color-accent-10: rgba(34, 64, 201, 0.1);
+  --color-accent-orange: #FF751F;
   --color-section-border: rgba(255, 117, 31, 0.18);
   --color-ink-40: rgba(20, 20, 20, 0.4);
   --color-ink-20: rgba(20, 20, 20, 0.2);
@@ -73,7 +74,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--color-accent);
+  color: var(--color-accent-orange);
 }
 .dim-line::before,
 .dim-line::after {
@@ -81,7 +82,7 @@
   display: block;
   width: 1px;
   height: 10px;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-orange);
   flex-shrink: 0;
 }
 

@@ -63,7 +63,7 @@ export function Contact() {
             href={PHONE_HREF}
             className="cta-blue-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
-              border: '2px solid var(--color-accent)',
+              border: '2px solid var(--color-accent-orange)',
               color: 'var(--color-ink)',
               fontFamily: 'var(--font-technical)',
               fontSize: 13,
@@ -81,7 +81,7 @@ export function Contact() {
             href={`mailto:${EMAIL}`}
             className="cta-blue-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
-              border: '2px solid var(--color-accent)',
+              border: '2px solid var(--color-accent-orange)',
               color: 'var(--color-ink)',
               fontFamily: 'var(--font-technical)',
               fontSize: 13,
