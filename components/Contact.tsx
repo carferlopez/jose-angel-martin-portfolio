@@ -61,10 +61,10 @@ export function Contact() {
         <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
           <a
             href={PHONE_HREF}
-            className="cta-blue-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
+            className="cta-orange-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
               border: '2px solid var(--color-accent-orange)',
-              color: 'var(--color-ink)',
+              color: 'var(--color-accent-orange)',
               fontFamily: 'var(--font-technical)',
               fontSize: 13,
               letterSpacing: '0.08em',
@@ -79,10 +79,10 @@ export function Contact() {
 
           <a
             href={`mailto:${EMAIL}`}
-            className="cta-blue-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
+            className="cta-orange-hover flex items-center justify-center gap-3 py-4 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
               border: '2px solid var(--color-accent-orange)',
-              color: 'var(--color-ink)',
+              color: 'var(--color-accent-orange)',
               fontFamily: 'var(--font-technical)',
               fontSize: 13,
               letterSpacing: '0.08em',

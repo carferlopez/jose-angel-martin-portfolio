@@ -98,21 +98,26 @@ export function PurchasingConsulting() {
           </FadeIn>
 
           <FadeIn delay={0.08}>
-            <div style={{ border: '1px solid var(--color-accent-orange)', padding: '1.75rem', position: 'relative' }}>
+            <div
+              className="relative overflow-hidden bg-white"
+              style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
+            >
+              <img
+                src="/media/pepe_profile_meme.jpg"
+                alt="Meme de Consultoría de Compras (Flex Tape)"
+                className="w-full h-full object-contain"
+              />
               <div className="cross-mark cross-mark-orange top-3 left-3" />
               <div className="cross-mark cross-mark-orange top-3 right-3" />
               <div className="cross-mark cross-mark-orange bottom-3 left-3" />
               <div className="cross-mark cross-mark-orange bottom-3 right-3" />
-              
               <div
-                className="mb-3"
-                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
+                className="absolute bottom-3 right-3"
+                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, color: 'var(--color-accent-orange)', letterSpacing: '0.08em' }}
+                aria-hidden="true"
               >
-                // ¿POR QUÉ TRABAJAR CONMIGO?
+                pepe_profile_meme.jpg ↗
               </div>
-              <p style={{ fontFamily: 'var(--font-technical)', fontSize: 12, lineHeight: 1.7, opacity: 0.72 }}>
-                Está feo que lo diga yo, pero ayudo a tu empresa a mejorar y optimizar los procesos de compra. Con experiencia real en automoción, retail, bienes de consumo y energías renovables, entiendo los retos específicos de cada sector y aporto soluciones probadas, no teorías. Mi enfoque es eminentemente práctico, orientado a resultados tangibles y adaptado a la realidad operativa de las empresas. Además, poseo gran experiencia en mercados asiáticos.
-              </p>
             </div>
           </FadeIn>
 
@@ -125,10 +130,10 @@ export function PurchasingConsulting() {
               <a
                 href="#contacto"
                 onClick={scrollToContact}
-                className="cta-blue-hover inline-flex items-center gap-2 px-5 py-3 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100"
+                className="cta-orange-hover inline-flex items-center gap-2 px-5 py-3 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
                 style={{
-                  border: '1px solid var(--color-ink)',
-                  color: 'var(--color-ink)',
+                  border: '1px solid var(--color-accent-orange)',
+                  color: 'var(--color-accent-orange)',
                   fontFamily: 'var(--font-technical)',
                   fontSize: 11,
                   letterSpacing: '0.08em',

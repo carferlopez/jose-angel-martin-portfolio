@@ -27,30 +27,23 @@ export function About() {
           whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="w-full max-w-[460px]"
         >
-          <div
-            className="relative overflow-hidden bg-white"
-            style={{ border: '1px solid rgba(20,20,20,0.18)', maxWidth: 420, aspectRatio: '500/561' }}
-          >
-            <TechnicalImage
-              src="/media/pepe_profile_meme.jpg"
-              alt="Retrato de Pepe Martín Ramírez"
-              label="pepe_profile_meme.jpg"
-              fill
-              sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
-              style={{ objectFit: 'contain' }}
-            />
-            <div className="cross-mark top-3 left-3" />
-            <div className="cross-mark top-3 right-3" />
-            <div className="cross-mark bottom-3 left-3" />
-            <div className="cross-mark bottom-3 right-3" />
+          <div style={{ border: '1px solid var(--color-accent-orange)', padding: '2rem', position: 'relative' }} className="bg-white">
+            <div className="cross-mark cross-mark-orange top-3 left-3" />
+            <div className="cross-mark cross-mark-orange top-3 right-3" />
+            <div className="cross-mark cross-mark-orange bottom-3 left-3" />
+            <div className="cross-mark cross-mark-orange bottom-3 right-3" />
+            
             <div
-              className="absolute bottom-3 right-3"
-              style={{ fontFamily: 'var(--font-technical)', fontSize: 9, color: 'var(--color-accent)', letterSpacing: '0.08em' }}
-              aria-hidden="true"
+              className="mb-4"
+              style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.15em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
             >
-              pepe_profile_meme.jpg ↗
+              // ¿POR QUÉ TRABAJAR CONMIGO?
             </div>
+            <p style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.7, opacity: 0.72 }}>
+              Está feo que lo diga yo, pero ayudo a tu empresa a mejorar y optimizar los procesos de compra. Con experiencia real en automoción, retail, bienes de consumo y energías renovables, entiendo los retos específicos de cada sector y aporto soluciones probadas, no teorías. Mi enfoque es eminentemente práctico, orientado a resultados tangibles y adaptado a la realidad operativa de las empresas. Además, poseo gran experiencia en mercados asiáticos.
+            </p>
           </div>
         </motion.div>
 

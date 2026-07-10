@@ -36,15 +36,6 @@ export function Manifesto() {
         00.1 — INICIO
       </div>
 
-      <div
-        className="absolute top-32 right-4 md:right-10 hidden md:flex flex-col items-end gap-1 opacity-30"
-        style={{ fontFamily: 'var(--font-technical)', fontSize: 9 }}
-        aria-hidden="true"
-      >
-        <span>FECHA: 2026.06</span>
-        <span>NORMATIVA: CTE · REBT</span>
-        <span>ÁMBITO: LA MANCHA</span>
-      </div>
 
       <motion.div
         className="absolute left-4 md:left-10 hidden md:block"
@@ -115,10 +106,10 @@ export function Manifesto() {
         >
           <a
             href={PHONE_HREF}
-            className="cta-blue-hover flex items-center gap-2 px-5 py-3 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
+            className="cta-orange-hover flex items-center gap-2 px-5 py-3 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
-              border: '1px solid var(--color-accent)',
-              color: 'var(--color-accent)',
+              border: '1px solid var(--color-accent-orange)',
+              color: 'var(--color-accent-orange)',
               fontFamily: 'var(--font-technical)',
               fontSize: 12,
               letterSpacing: '0.08em',
@@ -128,8 +119,7 @@ export function Manifesto() {
             aria-label={`Llamar al ${PHONE_DISPLAY}`}
           >
             <PhoneIcon />
-            Llamar
-          </a>
+            Llamar</a>
 
           <a
             href="#contacto"
