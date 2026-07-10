@@ -23,10 +23,10 @@ export function Manifesto() {
 
   return (
     <section
-      id="ingenieria"
-      className="relative flex flex-col justify-start md:justify-end pt-32 pb-14 md:py-20 md:min-h-screen px-4 md:px-10 border-b overflow-hidden"
+      id="inicio"
+      className="relative flex flex-col justify-start md:justify-end pt-32 pb-14 md:py-20 md:min-h-screen px-4 md:px-10 border-t border-b overflow-hidden"
       style={{ borderColor: 'var(--color-section-border)' }}
-      aria-labelledby="intro-heading"
+      aria-labelledby="manifesto-heading"
     >
       <div
         className="absolute top-28 left-4 md:left-10 section-number"

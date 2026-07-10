@@ -26,7 +26,8 @@ export function Coverage() {
   return (
     <section
       id="cobertura"
-      className="relative py-20 md:py-36 px-4 md:px-10"
+      className="relative py-20 md:py-36 px-4 md:px-10 border-t"
+      style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="coverage-heading"
     >
       {/* Número sección */}
