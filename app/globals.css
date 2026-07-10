@@ -48,7 +48,7 @@
   font-family: var(--font-display);
   font-weight: 800;
   letter-spacing: 0;
-  line-height: 0.88;
+  line-height: 1.08;
   text-transform: uppercase;
 }
 
@@ -142,18 +142,18 @@
 
 .highlight-heading {
   display: inline;
-  padding: 0 0.04em 0.015em;
+  padding: 0.05em 0.045em;
   background-color: var(--color-accent);
   color: var(--color-paper);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  line-height: 0.85;
+  line-height: 1.12;
 }
 
 .highlight-heading-loose {
-  padding-top: 0;
-  padding-bottom: 0.03em;
-  line-height: 0.92;
+  padding-top: 0.05em;
+  padding-bottom: 0.08em;
+  line-height: 1.28;
 }
 
 /* ─── Sello revisión ────────────────────────────────────────── */
