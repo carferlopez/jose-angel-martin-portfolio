@@ -68,8 +68,8 @@ export function Navigation() {
           href={PHONE_HREF}
           className="cta-orange-hover flex items-center gap-2 px-3 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
           style={{
-            border: '1px solid var(--color-accent-orange)',
-            color: 'var(--color-accent-orange)',
+            border: scrolled ? '1px solid var(--color-accent-orange)' : '1px solid rgba(255, 255, 255, 0.45)',
+            color: scrolled ? 'var(--color-accent-orange)' : 'var(--color-paper)',
             fontFamily: 'var(--font-technical)',
             fontSize: 11,
             letterSpacing: '0.06em',
