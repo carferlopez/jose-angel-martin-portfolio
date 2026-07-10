@@ -201,6 +201,11 @@
   opacity: 0.45;
 }
 
+.cross-mark-orange::before,
+.cross-mark-orange::after {
+  background-color: var(--color-accent-orange) !important;
+}
+
 /* ─── Reduced motion ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

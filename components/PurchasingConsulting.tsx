@@ -98,15 +98,15 @@ export function PurchasingConsulting() {
           </FadeIn>
 
           <FadeIn delay={0.08}>
-            <div style={{ border: '1px solid rgba(20,20,20,0.12)', padding: '1.75rem', position: 'relative' }}>
-              <div className="cross-mark top-3 left-3" />
-              <div className="cross-mark top-3 right-3" />
-              <div className="cross-mark bottom-3 left-3" />
-              <div className="cross-mark bottom-3 right-3" />
+            <div style={{ border: '1px solid var(--color-accent-orange)', padding: '1.75rem', position: 'relative' }}>
+              <div className="cross-mark cross-mark-orange top-3 left-3" />
+              <div className="cross-mark cross-mark-orange top-3 right-3" />
+              <div className="cross-mark cross-mark-orange bottom-3 left-3" />
+              <div className="cross-mark cross-mark-orange bottom-3 right-3" />
               
               <div
                 className="mb-3"
-                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--color-accent)', opacity: 0.9 }}
+                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
               >
                 // ¿POR QUÉ TRABAJAR CONMIGO?
               </div>
@@ -159,7 +159,7 @@ export function PurchasingConsulting() {
                 key={s.title}
                 className="group relative"
                 style={{
-                  borderTop: '1px solid rgba(20,20,20,0.08)',
+                  borderTop: '1px solid var(--color-section-border)',
                   paddingTop: '1.25rem',
                   paddingBottom: '0.5rem',
                 }}
@@ -173,7 +173,7 @@ export function PurchasingConsulting() {
                     style={{
                       fontFamily: 'var(--font-technical)',
                       fontSize: 10,
-                      color: 'var(--color-accent)',
+                      color: 'var(--color-accent-orange)',
                       opacity: 0.7,
                       marginTop: 2,
                     }}
@@ -201,7 +201,7 @@ export function PurchasingConsulting() {
               </motion.div>
             ))}
             {/* Cierre de borde final */}
-            <div style={{ borderTop: '1px solid rgba(20,20,20,0.08)' }} />
+            <div style={{ borderTop: '1px solid var(--color-section-border)' }} />
           </div>
         </div>
 
