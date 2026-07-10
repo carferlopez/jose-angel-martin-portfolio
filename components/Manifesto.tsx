@@ -24,12 +24,12 @@ export function Manifesto() {
   return (
     <section
       id="inicio"
-      className="relative flex flex-col justify-start md:justify-end pt-32 pb-14 md:py-20 md:min-h-screen px-4 md:px-10 border-t border-b overflow-hidden"
+      className="relative flex flex-col justify-start md:justify-end pt-16 pb-12 md:py-20 md:min-h-screen px-4 md:px-10 border-t border-b overflow-hidden"
       style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="manifesto-heading"
     >
       <div
-        className="absolute top-28 left-4 md:left-10 section-number"
+        className="absolute top-6 md:top-8 left-4 md:left-10 section-number"
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.12em' }}
         aria-hidden="true"
       >
