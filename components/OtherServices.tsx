@@ -65,7 +65,7 @@ export function OtherServices() {
                   <img
                     src={s.image}
                     alt={s.title}
-                    className="w-full h-full object-cover filter grayscale contrast-110 brightness-95 hover:grayscale-0 hover:scale-[1.03] transition-all duration-700 ease-out"
+                    className="w-full h-full object-cover hover:scale-[1.03] transition-all duration-700 ease-out"
                     style={{ display: 'block' }}
                   />
                   <div className="cross-mark top-1.5 left-1.5 opacity-60" style={{ transform: 'scale(0.7)' }} />
