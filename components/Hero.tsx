@@ -49,8 +49,9 @@ export function Hero() {
         <video
           ref={videoRef}
           className="h-full w-full object-contain bg-paper"
-          src="/media/heroblanco.mp4"
+          src="/media/hero_okk.mp4"
           autoPlay={!reduced}
+          loop
           muted
           playsInline
           preload="metadata"
