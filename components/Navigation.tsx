@@ -66,7 +66,11 @@ export function Navigation() {
         {/* Teléfono */}
         <a
           href={PHONE_HREF}
-          className="cta-blue-hover flex items-center gap-2 px-3 py-1.5 hover:!bg-accent hover:!border-accent hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent focus-visible:!border-accent focus-visible:!text-paper focus-visible:!opacity-100"
+          className={`flex items-center gap-2 px-3 py-1.5 hover:!text-paper hover:!opacity-100 focus-visible:!text-paper focus-visible:!opacity-100 ${
+            scrolled
+              ? 'cta-orange-hover hover:!bg-accent-orange hover:!border-accent-orange focus-visible:!bg-accent-orange focus-visible:!border-accent-orange'
+              : 'cta-blue-hover hover:!bg-accent hover:!border-accent focus-visible:!bg-accent focus-visible:!border-accent'
+          }`}
           style={{
             border: scrolled ? '1px solid var(--color-accent)' : '1px solid rgba(255,255,255,0.45)',
             color: scrolled ? 'var(--color-accent)' : 'var(--color-paper)',
