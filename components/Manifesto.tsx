@@ -14,14 +14,7 @@ function PhoneIcon() {
 
 export function Manifesto() {
   const reduced = useReducedMotion()
-  const [vpWidth, setVpWidth] = useState(0)
 
-  useEffect(() => {
-    setVpWidth(window.innerWidth)
-    const handler = () => setVpWidth(window.innerWidth)
-    window.addEventListener('resize', handler)
-    return () => window.removeEventListener('resize', handler)
-  }, [])
 
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -89,21 +82,15 @@ export function Manifesto() {
           aria-hidden="true"
         >
           <div className="flex items-center gap-0 w-full">
-            <div style={{ width: 1, height: 10, backgroundColor: 'var(--color-accent)', flexShrink: 0 }} />
+            <div style={{ width: 1, height: 10, backgroundColor: 'var(--color-accent-orange)', flexShrink: 0 }} />
             <motion.div
-              style={{ height: 1, backgroundColor: 'var(--color-accent)', flexGrow: 1 }}
+              style={{ height: 1, backgroundColor: 'var(--color-accent-orange)', flexGrow: 1 }}
               initial={{ scaleX: 0, transformOrigin: 'left' }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
             />
-            <div style={{ width: 1, height: 10, backgroundColor: 'var(--color-accent)', flexShrink: 0 }} />
-            <span
-              className="ml-3 whitespace-nowrap"
-              style={{ fontFamily: 'var(--font-technical)', fontSize: 10, color: 'var(--color-accent)', letterSpacing: '0.1em' }}
-            >
-              ↔ {vpWidth}px
-            </span>
+            <div style={{ width: 1, height: 10, backgroundColor: 'var(--color-accent-orange)', flexShrink: 0 }} />
           </div>
         </motion.div>
 
