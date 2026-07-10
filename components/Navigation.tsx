@@ -42,10 +42,10 @@ export function Navigation() {
       <motion.a
         href="#"
         onClick={scrollTo('#hero')}
-        className="relative block select-none"
+        className={`relative block select-none ${
+          scrolled ? 'w-[66px] h-[66px]' : 'w-[66px] h-[66px] md:w-[84px] md:h-[84px]'
+        }`}
         style={{
-          width: scrolled ? 66 : 84,
-          height: scrolled ? 66 : 84,
           textDecoration: 'none',
           transition: 'width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
