@@ -76,7 +76,7 @@ export function OtherServices() {
               )}
               <div
                 className="mb-2"
-                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--color-accent)', opacity: 0.8 }}
+                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--color-accent-orange)', opacity: 0.8 }}
                 aria-hidden="true"
               >
                 // 0{i + 1}
