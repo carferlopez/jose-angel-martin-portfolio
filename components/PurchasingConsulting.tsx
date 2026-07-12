@@ -111,13 +111,6 @@ export function PurchasingConsulting() {
               <div className="cross-mark cross-mark-orange top-3 right-3" />
               <div className="cross-mark cross-mark-orange bottom-3 left-3" />
               <div className="cross-mark cross-mark-orange bottom-3 right-3" />
-              <div
-                className="absolute bottom-3 right-3"
-                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, color: 'var(--color-accent-orange)', letterSpacing: '0.08em' }}
-                aria-hidden="true"
-              >
-                pepe_profile_meme.jpg ↗
-              </div>
             </div>
           </FadeIn>
 
