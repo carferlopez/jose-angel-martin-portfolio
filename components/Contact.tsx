@@ -64,8 +64,9 @@ export function Contact() {
             href={PHONE_HREF}
             className="cta-orange-hover mobile-cta-filled-orange flex items-center justify-center gap-3 py-4 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
             style={{
+              backgroundColor: 'var(--color-accent-orange)',
               border: '2px solid var(--color-accent-orange)',
-              color: 'var(--color-accent-orange)',
+              color: 'var(--color-paper)',
               fontFamily: 'var(--font-technical)',
               fontSize: 13,
               letterSpacing: '0.08em',
@@ -115,7 +116,7 @@ export function Contact() {
             </div>
           </div>
           <a
-            href="https://www.coitclm.com"
+            href="https://www.cogitialbacete.org/"
             className="rotring opacity-40 hover:opacity-70 transition-opacity"
             style={{ fontFamily: 'var(--font-technical)', fontSize: 11, color: 'var(--color-ink)', textDecoration: 'none', letterSpacing: '0.06em' }}
             target="_blank"

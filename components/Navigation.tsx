@@ -68,13 +68,14 @@ export function Navigation() {
           href={PHONE_HREF}
           className="cta-orange-hover mobile-cta-filled-orange flex items-center gap-2 px-3 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
           style={{
-            border: scrolled ? '1px solid var(--color-accent-orange)' : '1px solid rgba(255, 255, 255, 0.45)',
-            color: scrolled ? 'var(--color-accent-orange)' : 'var(--color-paper)',
+            backgroundColor: 'var(--color-accent-orange)',
+            border: '1px solid var(--color-accent-orange)',
+            color: 'var(--color-paper)',
             fontFamily: 'var(--font-technical)',
             fontSize: 11,
             letterSpacing: '0.06em',
             textDecoration: 'none',
-            transition: 'border-color 0.3s ease, color 0.3s ease',
+            transition: 'background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease',
           }}
           aria-label={`Llamar al ${PHONE_DISPLAY}`}
         >
