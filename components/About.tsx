@@ -34,9 +34,9 @@ export function About() {
             style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
           >
             <TechnicalImage
-              src="/media/pepe_profile.jpeg"
+              src="/media/IMG_305B50A4EF4A-5.jpeg"
               alt="Retrato de Pepe Martín Ramírez"
-              label="pepe_profile.jpeg"
+              label="IMG_305B50A4EF4A-5.jpeg"
               fill
               sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
               style={{ objectFit: 'cover' }}
