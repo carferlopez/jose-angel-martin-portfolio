@@ -122,7 +122,7 @@ export function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Colegio Ingenieros Industriales CLM ↗
+            Colegio Oficial de Ingenieros Técnicos Industriales de Albacete ↗
           </a>
         </div>
         <div
