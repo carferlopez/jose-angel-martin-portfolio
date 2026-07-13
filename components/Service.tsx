@@ -1,7 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
-import { TechnicalImage } from './TechnicalImage'
 
 const INCLUDED = [
   'Consulta inicial gratuita y análisis de viabilidad',
@@ -76,26 +75,6 @@ export function Service() {
               que tu local cumple con la normativa urbanística, de seguridad, higiene y medio ambiente.
               Es obligatoria para abrir cualquier negocio en España.
             </p>
-          </FadeIn>
-
-          <FadeIn delay={0.08}>
-            <div
-              className="relative overflow-hidden bg-white"
-              style={{ border: '1px solid var(--color-accent-orange)', width: '100%', aspectRatio: '1021/557' }}
-            >
-              <TechnicalImage
-                src="/media/telegram-cloud-photo-size-4-5897964037536943645-y.jpg_202607101306.jpeg"
-                alt="Proyecto de licencia de actividad en local comercial"
-                label="licencia_actividad.jpg"
-                fill
-                sizes="(min-width: 768px) 480px, calc(100vw - 32px)"
-                style={{ objectFit: 'cover' }}
-              />
-              <div className="cross-mark cross-mark-orange top-3 left-3" />
-              <div className="cross-mark cross-mark-orange top-3 right-3" />
-              <div className="cross-mark cross-mark-orange bottom-3 left-3" />
-              <div className="cross-mark cross-mark-orange bottom-3 right-3" />
-            </div>
           </FadeIn>
         </div>
 
