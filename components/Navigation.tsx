@@ -114,11 +114,11 @@ export function Navigation() {
           href={WHATSAPP_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center px-2.5 py-1.5 hover:!bg-[#25D366] hover:!border-[#25D366] hover:!text-white focus-visible:!bg-[#25D366] focus-visible:!border-[#25D366] focus-visible:!text-white transition-all duration-300"
+          className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
           style={{
             border: '1px solid #25D366',
-            color: '#25D366',
-            backgroundColor: 'transparent',
+            color: '#FFFFFF',
+            backgroundColor: '#25D366',
             textDecoration: 'none',
           }}
           aria-label="Abrir WhatsApp"
@@ -132,11 +132,11 @@ export function Navigation() {
           href={TELEGRAM_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center px-2.5 py-1.5 hover:!bg-[#24A1DE] hover:!border-[#24A1DE] hover:!text-white focus-visible:!bg-[#24A1DE] focus-visible:!border-[#24A1DE] focus-visible:!text-white transition-all duration-300"
+          className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
           style={{
             border: '1px solid #24A1DE',
-            color: '#24A1DE',
-            backgroundColor: 'transparent',
+            color: '#FFFFFF',
+            backgroundColor: '#24A1DE',
             textDecoration: 'none',
           }}
           aria-label="Abrir Telegram"
@@ -148,11 +148,11 @@ export function Navigation() {
         {/* Email */}
         <a
           href={`mailto:${EMAIL}`}
-          className="flex items-center justify-center px-2.5 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper transition-all duration-300"
+          className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
           style={{
             border: '1px solid var(--color-accent-orange)',
-            color: 'var(--color-accent-orange)',
-            backgroundColor: 'transparent',
+            color: 'var(--color-paper)',
+            backgroundColor: 'var(--color-accent-orange)',
             textDecoration: 'none',
           }}
           aria-label={`Enviar correo a ${EMAIL}`}
