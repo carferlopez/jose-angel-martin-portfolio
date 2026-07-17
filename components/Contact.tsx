@@ -36,7 +36,7 @@ export function Contact() {
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
         aria-hidden="true"
       >
-        07.0 — CONTACTO
+        06.0 — CONTACTO
       </div>
 
       <div className="max-w-3xl">

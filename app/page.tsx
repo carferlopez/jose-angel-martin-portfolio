@@ -9,7 +9,6 @@ import { OtherServices } from '@/components/OtherServices'
 import { PurchasingConsulting } from '@/components/PurchasingConsulting'
 import { Coverage } from '@/components/Coverage'
 import { About } from '@/components/About'
-import { Faq } from '@/components/Faq'
 import { Contact } from '@/components/Contact'
 
 export default function Home() {
@@ -25,7 +24,6 @@ export default function Home() {
         <PurchasingConsulting />
         <Coverage />
         <About />
-        <Faq />
         <Contact />
       </main>
     </LenisProvider>
