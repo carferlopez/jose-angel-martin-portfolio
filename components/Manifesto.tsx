@@ -58,9 +58,9 @@ export function Manifesto() {
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
           >
-            <span className="highlight-heading">Consultoría de Compras</span>
+            <span className="highlight-heading">Ingeniería Eléctrica</span>
             <br />
-            <span className="highlight-heading">e Ingeniería Eléctrica</span>
+            <span className="highlight-heading">y Consultoría de Compras</span>
           </motion.h1>
         </div>
 

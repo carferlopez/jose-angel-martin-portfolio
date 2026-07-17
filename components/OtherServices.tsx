@@ -4,6 +4,12 @@ import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 const SERVICES = [
   {
+    icon: '📋',
+    title: 'Licencias de Actividad',
+    desc: 'Para comercios, talleres, bares, etc. gestionada ante el ayuntamiento. Memoria técnica y planos de planta.',
+    image: '/media/service_licencias.png',
+  },
+  {
     icon: '☀',
     title: 'Energía solar fotovoltaica',
     desc: 'Diseño, proyecto y legalización de instalaciones de autoconsumo en viviendas, comercios e industrias.',
@@ -27,12 +33,20 @@ export function OtherServices() {
   const reduced = useReducedMotion()
   return (
     <section
-      id="otros-servicios"
+      id="ingenieria"
       className="relative py-12 md:py-20 px-4 md:px-10 border-t"
       style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="other-services-heading"
     >
-
+      <span id="otros-servicios" />
+      {/* Número sección */}
+      <div
+        className="mb-10 section-number"
+        style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
+        aria-hidden="true"
+      >
+        02.0 — INGENIERÍA ELÉCTRICA
+      </div>
 
       <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
         <motion.h2
@@ -44,10 +58,10 @@ export function OtherServices() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="highlight-heading">Otros servicios</span>
+          <span className="highlight-heading">Servicios de Ingeniería</span>
         </motion.h2>
 
-        <div className="grid sm:grid-cols-3 gap-6 flex-1">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 flex-1">
           {SERVICES.map((s, i) => (
             <motion.div
               key={s.title}

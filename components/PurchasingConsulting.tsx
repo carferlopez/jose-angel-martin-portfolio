@@ -73,7 +73,7 @@ export function PurchasingConsulting() {
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
         aria-hidden="true"
       >
-        02.0 — CONSULTORÍA DE COMPRAS
+        03.0 — CONSULTORÍA DE COMPRAS
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 md:gap-20">

@@ -2,48 +2,19 @@
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
-const INCLUDED = [
-  'Consulta inicial gratuita y análisis de viabilidad',
-  'Memoria técnica descriptiva y justificativa',
-  'Planos de planta, alzados y distribución',
-  'Proyecto de instalaciones si es necesario (eléctrica, contra incendios, climatización)',
-  'Presentación del expediente en el Ayuntamiento',
-  'Gestión de comunicaciones con la administración',
-  'Seguimiento hasta la resolución favorable',
-]
-
-const BUSINESS_TYPES = [
-  'Comercios y tiendas',
-  'Bares, cafeterías y restaurantes',
-  'Talleres mecánicos y automoción',
-  'Oficinas y despachos profesionales',
-  'Naves industriales y almacenes',
-  'Centros de estética, peluquerías y spas',
-  'Academias y centros de formación',
-  'Supermercados y grandes superficies',
-  'Industrias agroalimentarias',
-  'Cualquier otra actividad económica',
-]
-
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const reduced = useReducedMotion()
-  return (
-    <motion.div
-      initial={reduced ? undefined : { opacity: 0, y: 16 }}
-      whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.55, delay }}
-    >
-      {children}
-    </motion.div>
-  )
-}
-
 export function Service() {
+  const reduced = useReducedMotion()
+
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault()
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section
       id="servicio"
-      className="relative py-12 md:py-20 px-4 md:px-10"
+      className="relative py-12 md:py-20 px-4 md:px-10 border-t"
+      style={{ borderColor: 'var(--color-section-border)' }}
       aria-labelledby="service-heading"
     >
       {/* Número sección */}
@@ -52,82 +23,159 @@ export function Service() {
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
         aria-hidden="true"
       >
-        01.0 — SERVICIO
+        01.0 — SERVICIOS
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 md:gap-20">
+      <motion.h2
+        id="service-heading"
+        className="font-display mb-12"
+        style={{ fontSize: 'clamp(2rem, 4.5vw, 5rem)', color: 'var(--color-ink)' }}
+        initial={reduced ? undefined : { opacity: 0, y: 16 }}
+        whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.55 }}
+      >
+        <span className="highlight-heading highlight-heading-loose">Áreas de especialización</span>
+      </motion.h2>
 
-        {/* Columna izquierda */}
-        <div className="space-y-10">
-          <FadeIn>
-            <h2
-              id="service-heading"
-              className="font-display"
-              style={{ fontSize: 'clamp(2rem, 5vw, 5.5rem)', color: 'var(--color-ink)' }}
+      <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+        {/* Categoría 1: Ingeniería Eléctrica */}
+        <motion.div
+          className="flex flex-col justify-between group"
+          initial={reduced ? undefined : { opacity: 0, y: 20 }}
+          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, delay: 0.05 }}
+        >
+          <div>
+            <div
+              className="relative overflow-hidden mb-6 aspect-[16/10] bg-white animate-fade-in cursor-pointer"
+              style={{ border: '1px solid var(--color-section-border)' }}
+              onClick={(e) => scrollToSection(e, '#ingenieria')}
             >
-              <span className="highlight-heading highlight-heading-loose">¿Qué es una licencia de actividad?</span>
-            </h2>
+              <img
+                src="/media/medidores.png"
+                alt="Servicios de Ingeniería"
+                className="w-full h-full object-cover group-hover:scale-[1.03] transition-all duration-700 ease-out"
+                style={{ display: 'block' }}
+              />
+              <div className="cross-mark top-2 left-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+              <div className="cross-mark top-2 right-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+              <div className="cross-mark bottom-2 left-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+              <div className="cross-mark bottom-2 right-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+            </div>
+
+            <div
+              className="mb-2"
+              style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.14em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
+              aria-hidden="true"
+            >
+              // 01 — INGENIERÍA
+            </div>
+
+            <h3
+              className="font-display mb-3"
+              style={{ fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)', color: 'var(--color-ink)' }}
+            >
+              <a
+                href="#ingenieria"
+                onClick={(e) => scrollToSection(e, '#ingenieria')}
+                className="hover:opacity-80 transition-opacity"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <span className="highlight-heading">Servicios de Ingeniería</span>
+              </a>
+            </h3>
+
             <p
-              className="mt-4 leading-relaxed"
+              className="leading-relaxed mb-6"
               style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.75, opacity: 0.75 }}
             >
-              La licencia de actividad (o licencia de apertura) es la autorización municipal que certifica
-              que tu local cumple con la normativa urbanística, de seguridad, higiene y medio ambiente.
-              Es obligatoria para abrir cualquier negocio en España.
+              Diseño, proyecto técnico y legalización de instalaciones de baja tensión, energía solar fotovoltaica
+              e infraestructuras de recarga para vehículos eléctricos (VE) en viviendas, comercios e industrias.
             </p>
-          </FadeIn>
-        </div>
+          </div>
 
-        {/* Columna derecha */}
-        <div className="space-y-10">
-          {/* Qué incluye */}
-          <FadeIn delay={0.05}>
-            <h3
-              className="font-display mb-5"
-              style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2.5rem)', color: 'var(--color-ink)' }}
+          <div>
+            <a
+              href="#ingenieria"
+              onClick={(e) => scrollToSection(e, '#ingenieria')}
+              className="inline-flex items-center gap-2 py-2 font-technical text-xs tracking-widest uppercase transition-colors"
+              style={{ color: 'var(--color-ink)', fontWeight: 600, letterSpacing: '0.12em', borderBottom: '1px solid var(--color-ink)' }}
             >
-              <span className="highlight-heading">Qué incluye mi servicio</span>
-            </h3>
-            <ul className="space-y-2 list-none">
-              {INCLUDED.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-3"
-                  style={{ fontFamily: 'var(--font-technical)', fontSize: 12, lineHeight: 1.6, opacity: 0.8 }}
-                >
-                  <span
-                    style={{ color: 'var(--color-accent)', flexShrink: 0, marginTop: 2 }}
-                    aria-hidden="true"
-                  >
-                    —
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </FadeIn>
+              VER SERVICIOS DE INGENIERÍA —&gt;
+            </a>
+          </div>
+        </motion.div>
 
-          {/* Para qué locales */}
-          <FadeIn delay={0.12}>
-            <h3
-              className="font-display mb-4"
-              style={{ fontSize: 'clamp(1.2rem, 2vw, 2rem)', color: 'var(--color-ink)' }}
+        {/* Categoría 2: Consultoría de Compras */}
+        <motion.div
+          className="flex flex-col justify-between group"
+          initial={reduced ? undefined : { opacity: 0, y: 20 }}
+          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, delay: 0.12 }}
+        >
+          <div>
+            <div
+              className="relative overflow-hidden mb-6 aspect-[16/10] bg-white animate-fade-in cursor-pointer"
+              style={{ border: '1px solid var(--color-section-border)' }}
+              onClick={(e) => scrollToSection(e, '#compras')}
             >
-              <span className="highlight-heading">¿Para qué tipo de negocios?</span>
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {BUSINESS_TYPES.map((type) => (
-                <span
-                  key={type}
-                  className="stamp"
-                  style={{ opacity: 0.65, fontSize: 10 }}
-                >
-                  {type}
-                </span>
-              ))}
+              <img
+                src="/media/compras.png"
+                alt="Servicios de Consultoría de Compras"
+                className="w-full h-full object-cover group-hover:scale-[1.03] transition-all duration-700 ease-out"
+                style={{ display: 'block' }}
+              />
+              <div className="cross-mark top-2 left-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+              <div className="cross-mark top-2 right-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+              <div className="cross-mark bottom-2 left-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+              <div className="cross-mark bottom-2 right-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
             </div>
-          </FadeIn>
-        </div>
+
+            <div
+              className="mb-2"
+              style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.14em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
+              aria-hidden="true"
+            >
+              // 02 — CONSULTORÍA
+            </div>
+
+            <h3
+              className="font-display mb-3"
+              style={{ fontSize: 'clamp(1.5rem, 2.8vw, 2.5rem)', color: 'var(--color-ink)' }}
+            >
+              <a
+                href="#compras"
+                onClick={(e) => scrollToSection(e, '#compras')}
+                className="hover:opacity-80 transition-opacity"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <span className="highlight-heading">Servicios de Consultoría de Compras</span>
+              </a>
+            </h3>
+
+            <p
+              className="leading-relaxed mb-6"
+              style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.75, opacity: 0.75 }}
+            >
+              Diagnóstico y optimización de procesos, sourcing y homologación de proveedores, reducción de costes,
+              gestión de contratos e Interim Management para profesionalizar tu cadena de suministro.
+            </p>
+          </div>
+
+          <div>
+            <a
+              href="#compras"
+              onClick={(e) => scrollToSection(e, '#compras')}
+              className="inline-flex items-center gap-2 py-2 font-technical text-xs tracking-widest uppercase transition-colors"
+              style={{ color: 'var(--color-ink)', fontWeight: 600, letterSpacing: '0.12em', borderBottom: '1px solid var(--color-ink)' }}
+            >
+              VER CONSULTORÍA DE COMPRAS —&gt;
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
