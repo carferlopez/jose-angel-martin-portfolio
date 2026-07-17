@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { PHONE_HREF, PHONE_DISPLAY, WHATSAPP_HREF, TELEGRAM_HREF } from '@/lib/constants'
+import { PHONE_HREF, PHONE_DISPLAY, WHATSAPP_HREF, TELEGRAM_HREF, EMAIL } from '@/lib/constants'
 
 
 
@@ -9,6 +9,15 @@ function PhoneIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
       <path d="M2.5 1h3l1.5 3.5-1.5 1a9 9 0 0 0 4 4l1-1.5L14 9.5V13a1.5 1.5 0 0 1-1.5 1.5C5.5 14.5.5 9.5.5 3A1.5 1.5 0 0 1 2.5 1z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
+function MailIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+      <rect x="1.5" y="2.5" width="12" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+      <path d="M1.5 3.5L7.5 8.5L13.5 3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
@@ -134,6 +143,22 @@ export function Navigation() {
           title="Abrir Telegram"
         >
           <TelegramIcon />
+        </a>
+
+        {/* Email */}
+        <a
+          href={`mailto:${EMAIL}`}
+          className="flex items-center justify-center px-2.5 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper transition-all duration-300"
+          style={{
+            border: '1px solid var(--color-accent-orange)',
+            color: 'var(--color-accent-orange)',
+            backgroundColor: 'transparent',
+            textDecoration: 'none',
+          }}
+          aria-label={`Enviar correo a ${EMAIL}`}
+          title={`Enviar correo a ${EMAIL}`}
+        >
+          <MailIcon />
         </a>
       </div>
     </motion.header>
