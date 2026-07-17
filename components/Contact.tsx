@@ -89,7 +89,7 @@ export function Contact() {
             aria-label={`Llamar al ${PHONE_DISPLAY}`}
           >
             <PhoneIcon />
-            <span>Llamar · {PHONE_DISPLAY}</span>
+            <span>{PHONE_DISPLAY}</span>
           </a>
 
           {/* WhatsApp */}
