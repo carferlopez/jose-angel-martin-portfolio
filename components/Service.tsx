@@ -125,7 +125,7 @@ export function Service() {
               <img
                 src="/media/compras.png"
                 alt="Servicios de Consultoría de Compras"
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-all duration-700 ease-out"
+                className="w-full h-full object-cover scale-[1.25] group-hover:scale-[1.3] transition-all duration-700 ease-out"
                 style={{ display: 'block' }}
               />
               <div className="cross-mark top-2 left-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
