@@ -45,35 +45,35 @@ export function OtherServices() {
         style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.18em' }}
         aria-hidden="true"
       >
-        02.0 — INGENIERÍA ELÉCTRICA
+        02.0 — SERVICIOS DE INGENIERÍA
       </div>
 
-      <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
+      <div className="flex flex-col gap-12 md:gap-16">
         <motion.h2
           id="other-services-heading"
-          className="font-display shrink-0"
-          style={{ fontSize: 'clamp(1.8rem, 3.5vw, 4rem)', color: 'var(--color-ink)', opacity: 0.9 }}
+          className="font-display"
+          style={{ fontSize: 'clamp(2rem, 4.5vw, 5rem)', color: 'var(--color-ink)' }}
           initial={reduced ? undefined : { opacity: 0, y: 14 }}
-          whileInView={reduced ? undefined : { opacity: 0.9, y: 0 }}
+          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="highlight-heading">Servicios de Ingeniería</span>
+          <span className="highlight-heading highlight-heading-loose">Servicios de Ingeniería</span>
         </motion.h2>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 flex-1">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 w-full">
           {SERVICES.map((s, i) => (
             <motion.div
               key={s.title}
-              style={{ borderTop: '1px solid var(--color-section-border)', paddingTop: '1rem' }}
-              initial={reduced ? undefined : { opacity: 0, y: 14 }}
+              style={{ borderTop: '1px solid var(--color-section-border)', paddingTop: '1.25rem' }}
+              initial={reduced ? undefined : { opacity: 0, y: 16 }}
               whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.08 }}
             >
               {s.image && (
                 <div
-                  className="relative overflow-hidden mb-6 aspect-video bg-white animate-fade-in"
+                  className="relative overflow-hidden mb-6 aspect-[16/10] bg-white animate-fade-in"
                   style={{ border: '1px solid var(--color-section-border)' }}
                 >
                   <img
@@ -82,26 +82,29 @@ export function OtherServices() {
                     className="w-full h-full object-cover hover:scale-[1.03] transition-all duration-700 ease-out"
                     style={{ display: 'block' }}
                   />
-                  <div className="cross-mark top-1.5 left-1.5 opacity-60" style={{ transform: 'scale(0.7)' }} />
-                  <div className="cross-mark top-1.5 right-1.5 opacity-60" style={{ transform: 'scale(0.7)' }} />
-                  <div className="cross-mark bottom-1.5 left-1.5 opacity-60" style={{ transform: 'scale(0.7)' }} />
-                  <div className="cross-mark bottom-1.5 right-1.5 opacity-60" style={{ transform: 'scale(0.7)' }} />
+                  <div className="cross-mark top-2 left-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+                  <div className="cross-mark top-2 right-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+                  <div className="cross-mark bottom-2 left-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
+                  <div className="cross-mark bottom-2 right-2 opacity-70" style={{ transform: 'scale(0.8)' }} />
                 </div>
               )}
               <div
                 className="mb-2"
-                style={{ fontFamily: 'var(--font-technical)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--color-accent-orange)', opacity: 0.8 }}
+                style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.14em', color: 'var(--color-accent-orange)', opacity: 0.9 }}
                 aria-hidden="true"
               >
                 // 0{i + 1}
               </div>
               <h3
-                className="font-display mb-2"
-                style={{ fontSize: 'clamp(1rem, 1.8vw, 1.4rem)', color: 'var(--color-ink)' }}
+                className="font-display mb-3"
+                style={{ fontSize: 'clamp(1.3rem, 2.2vw, 1.8rem)', color: 'var(--color-ink)' }}
               >
                 <span className="highlight-heading">{s.title}</span>
               </h3>
-              <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, lineHeight: 1.65, opacity: 0.6 }}>
+              <p
+                className="leading-relaxed"
+                style={{ fontFamily: 'var(--font-technical)', fontSize: 14, lineHeight: 1.75, opacity: 0.8 }}
+              >
                 {s.desc}
               </p>
             </motion.div>
