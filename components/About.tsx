@@ -22,30 +22,41 @@ export function About() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
-        {/* Foto */}
+        {/* Foto con enlace a LinkedIn */}
         <motion.div
           initial={reduced ? undefined : { opacity: 0, y: 20 }}
           whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div
-            className="relative overflow-hidden bg-white"
-            style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
+          <a
+            href="https://es.linkedin.com/in/pepe-martin-992849158"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block group cursor-pointer"
+            aria-label="Perfil de LinkedIn de Pepe Martín Ramírez"
           >
-            <TechnicalImage
-              src="/media/IMG_305B50A4EF4A-5.jpeg"
-              alt="Retrato de Pepe Martín Ramírez"
-              label="IMG_305B50A4EF4A-5.jpeg"
-              fill
-              sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
-              style={{ objectFit: 'cover' }}
-            />
-            <div className="cross-mark cross-mark-orange top-3 left-3" />
-            <div className="cross-mark cross-mark-orange top-3 right-3" />
-            <div className="cross-mark cross-mark-orange bottom-3 left-3" />
-            <div className="cross-mark cross-mark-orange bottom-3 right-3" />
-          </div>
+            <div
+              className="relative overflow-hidden bg-white group-hover:shadow-lg transition-all duration-300"
+              style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
+            >
+              <TechnicalImage
+                src="/media/IMG_305B50A4EF4A-5.jpeg"
+                alt="Retrato de Pepe Martín Ramírez"
+                label="IMG_305B50A4EF4A-5.jpeg"
+                fill
+                sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
+                style={{ objectFit: 'cover' }}
+              />
+              <div className="cross-mark cross-mark-orange top-3 left-3" />
+              <div className="cross-mark cross-mark-orange top-3 right-3" />
+              <div className="cross-mark cross-mark-orange bottom-3 left-3" />
+              <div className="cross-mark cross-mark-orange bottom-3 right-3" />
+              <div className="absolute bottom-4 right-4 bg-accent-orange text-paper px-2.5 py-1 text-[10px] font-technical uppercase tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
+                LinkedIn ↗
+              </div>
+            </div>
+          </a>
         </motion.div>
 
         {/* Bio */}
@@ -62,7 +73,16 @@ export function About() {
               className="font-display mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 4.5rem)', color: 'var(--color-ink)' }}
             >
-              <span className="highlight-heading">Pepe Martín Ramírez</span>
+              <a
+                href="https://es.linkedin.com/in/pepe-martin-992849158"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent-orange transition-colors inline-flex items-center gap-2 group"
+                aria-label="Perfil de LinkedIn de Pepe Martín Ramírez"
+              >
+                <span className="highlight-heading">Pepe Martín Ramírez</span>
+                <span className="text-accent-orange opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all text-2xl md:text-3xl" aria-hidden="true">↗</span>
+              </a>
             </h2>
             <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.1em', opacity: 0.45, textTransform: 'uppercase' }}>
               Ingeniero Técnico Eléctrico
@@ -78,8 +98,10 @@ export function About() {
           </p>
 
           <div>
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="stamp">Ingeniero Técnico</span>
+            <div className="flex flex-wrap gap-2 mb-6 uppercase">
+              <span className="stamp">Ingeniero Técnico Eléctrico</span>
+              <span className="stamp">Comprador Técnico</span>
+              <span className="stamp">Jefe de Compras</span>
               <span className="stamp">Pedro Muñoz</span>
               <span className="stamp">+10 años exp.</span>
               <span className="stamp">Trato directo</span>
