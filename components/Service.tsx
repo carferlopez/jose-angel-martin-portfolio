@@ -35,7 +35,7 @@ export function Service() {
         viewport={{ once: true }}
         transition={{ duration: 0.55 }}
       >
-        <span className="highlight-heading highlight-heading-loose">Áreas de especialización</span>
+        <span className="highlight-heading highlight-heading-loose">SERVICIOS</span>
       </motion.h2>
 
       <div className="grid md:grid-cols-2 gap-10 md:gap-16">
