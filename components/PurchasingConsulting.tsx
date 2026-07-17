@@ -12,10 +12,11 @@ const LIST_ITEMS = [
   'Jefe de compras temporal',
 ]
 
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function FadeIn({ children, delay = 0, className }: { children: React.ReactNode; delay?: number; className?: string }) {
   const reduced = useReducedMotion()
   return (
     <motion.div
+      className={className}
       initial={reduced ? undefined : { opacity: 0, y: 16 }}
       whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
@@ -43,39 +44,38 @@ export function PurchasingConsulting() {
         03.0 — CONSULTORÍA DE COMPRAS
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
-        {/* Columna Izquierda: Título y Foto */}
-        <div className="space-y-10">
-          <FadeIn>
-            <h2
-              id="compras-heading"
-              className="font-display"
-              style={{ fontSize: 'clamp(2rem, 5vw, 5.5rem)', color: 'var(--color-ink)' }}
-            >
-              <span className="highlight-heading highlight-heading-loose">Consultoría de Compras</span>
-            </h2>
-          </FadeIn>
+      {/* Título principal */}
+      <FadeIn>
+        <h2
+          id="compras-heading"
+          className="font-display mb-10 md:mb-12"
+          style={{ fontSize: 'clamp(2rem, 5vw, 5.5rem)', color: 'var(--color-ink)' }}
+        >
+          <span className="highlight-heading highlight-heading-loose">Consultoría de Compras</span>
+        </h2>
+      </FadeIn>
 
-          <FadeIn delay={0.08}>
-            <div
-              className="relative overflow-hidden bg-white"
-              style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
-            >
-              <img
-                src="/media/pepe_profile_meme.jpg"
-                alt="Meme de Consultoría de Compras (Flex Tape)"
-                className="w-full h-full object-contain"
-              />
-              <div className="cross-mark cross-mark-orange top-3 left-3" />
-              <div className="cross-mark cross-mark-orange top-3 right-3" />
-              <div className="cross-mark cross-mark-orange bottom-3 left-3" />
-              <div className="cross-mark cross-mark-orange bottom-3 right-3" />
-            </div>
-          </FadeIn>
-        </div>
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        {/* Columna Izquierda: Foto */}
+        <FadeIn delay={0.08} className="w-full md:w-auto shrink-0">
+          <div
+            className="relative overflow-hidden bg-white mx-auto md:mx-0"
+            style={{ border: '1px solid var(--color-accent-orange)', width: '100%', maxWidth: 420, aspectRatio: '500/561' }}
+          >
+            <img
+              src="/media/pepe_profile_meme.jpg"
+              alt="Meme de Consultoría de Compras (Flex Tape)"
+              className="w-full h-full object-contain"
+            />
+            <div className="cross-mark cross-mark-orange top-3 left-3" />
+            <div className="cross-mark cross-mark-orange top-3 right-3" />
+            <div className="cross-mark cross-mark-orange bottom-3 left-3" />
+            <div className="cross-mark cross-mark-orange bottom-3 right-3" />
+          </div>
+        </FadeIn>
 
         {/* Columna Derecha: Texto único adjuntado */}
-        <div className="md:pt-4 space-y-8">
+        <div className="flex-1 space-y-8 md:pt-2 max-w-xl">
           <FadeIn delay={0.1}>
             <p
               className="leading-relaxed"
