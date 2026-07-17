@@ -129,87 +129,90 @@ export function Navigation() {
 
       {/* CTAs de contacto rápido + Menú desplegable */}
       <div className="flex items-center gap-1.5 sm:gap-2 relative" ref={menuRef}>
-        {/* Teléfono */}
-        <a
-          href={PHONE_HREF}
-          className="cta-orange-hover mobile-cta-filled-orange flex items-center gap-2 px-3 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
-          style={{
-            backgroundColor: 'var(--color-accent-orange)',
-            border: '1px solid var(--color-accent-orange)',
-            color: 'var(--color-paper)',
-            fontFamily: 'var(--font-technical)',
-            fontSize: 11,
-            letterSpacing: '0.06em',
-            textDecoration: 'none',
-            transition: 'background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease',
-          }}
-          aria-label={`Llamar al ${PHONE_DISPLAY}`}
-        >
-          <PhoneIcon />
-          <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
-        </a>
+        {/* En móvil se esconden los botones sueltos (quedaban amontonados) y se muestran solo en md+ */}
+        <div className="hidden md:flex items-center gap-1.5 sm:gap-2">
+          {/* Teléfono */}
+          <a
+            href={PHONE_HREF}
+            className="cta-orange-hover mobile-cta-filled-orange flex items-center gap-2 px-3 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
+            style={{
+              backgroundColor: 'var(--color-accent-orange)',
+              border: '1px solid var(--color-accent-orange)',
+              color: 'var(--color-paper)',
+              fontFamily: 'var(--font-technical)',
+              fontSize: 11,
+              letterSpacing: '0.06em',
+              textDecoration: 'none',
+              transition: 'background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease',
+            }}
+            aria-label={`Llamar al ${PHONE_DISPLAY}`}
+          >
+            <PhoneIcon />
+            <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
+          </a>
 
-        {/* WhatsApp */}
-        <a
-          href={WHATSAPP_HREF}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
-          style={{
-            border: '1px solid #25D366',
-            color: '#FFFFFF',
-            backgroundColor: '#25D366',
-            textDecoration: 'none',
-          }}
-          aria-label="Abrir WhatsApp"
-          title="Abrir WhatsApp"
-        >
-          <WhatsAppIcon />
-        </a>
+          {/* WhatsApp */}
+          <a
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
+            style={{
+              border: '1px solid #25D366',
+              color: '#FFFFFF',
+              backgroundColor: '#25D366',
+              textDecoration: 'none',
+            }}
+            aria-label="Abrir WhatsApp"
+            title="Abrir WhatsApp"
+          >
+            <WhatsAppIcon />
+          </a>
 
-        {/* Telegram */}
-        <a
-          href={TELEGRAM_HREF}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
-          style={{
-            border: '1px solid #24A1DE',
-            color: '#FFFFFF',
-            backgroundColor: '#24A1DE',
-            textDecoration: 'none',
-          }}
-          aria-label="Abrir Telegram"
-          title="Abrir Telegram"
-        >
-          <TelegramIcon />
-        </a>
+          {/* Telegram */}
+          <a
+            href={TELEGRAM_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
+            style={{
+              border: '1px solid #24A1DE',
+              color: '#FFFFFF',
+              backgroundColor: '#24A1DE',
+              textDecoration: 'none',
+            }}
+            aria-label="Abrir Telegram"
+            title="Abrir Telegram"
+          >
+            <TelegramIcon />
+          </a>
 
-        {/* Email */}
-        <a
-          href={`mailto:${EMAIL}`}
-          className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
-          style={{
-            border: '1px solid var(--color-accent-orange)',
-            color: 'var(--color-paper)',
-            backgroundColor: 'var(--color-accent-orange)',
-            textDecoration: 'none',
-          }}
-          aria-label={`Enviar correo a ${EMAIL}`}
-          title={`Enviar correo a ${EMAIL}`}
-        >
-          <MailIcon />
-        </a>
+          {/* Email */}
+          <a
+            href={`mailto:${EMAIL}`}
+            className="flex items-center justify-center px-2.5 py-1.5 hover:opacity-85 focus-visible:opacity-85 transition-opacity duration-300"
+            style={{
+              border: '1px solid var(--color-accent-orange)',
+              color: 'var(--color-paper)',
+              backgroundColor: 'var(--color-accent-orange)',
+              textDecoration: 'none',
+            }}
+            aria-label={`Enviar correo a ${EMAIL}`}
+            title={`Enviar correo a ${EMAIL}`}
+          >
+            <MailIcon />
+          </a>
+        </div>
 
-        {/* Botón Menú Hamburguesa */}
+        {/* Botón Menú Hamburguesa en color naranja sólido */}
         <button
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex items-center justify-center px-2.5 py-1.5 transition-colors duration-300 ml-0.5 cursor-pointer"
+          className="flex items-center justify-center px-3 py-1.5 transition-all duration-300 ml-0.5 cursor-pointer hover:opacity-90 focus-visible:opacity-90"
           style={{
-            border: scrolled ? '1px solid var(--color-ink)' : '1px solid rgba(255,255,255,0.4)',
-            color: scrolled ? 'var(--color-ink)' : '#FFFFFF',
-            backgroundColor: scrolled ? 'transparent' : 'rgba(0,0,0,0.35)',
+            border: '1px solid var(--color-accent-orange)',
+            color: 'var(--color-paper)',
+            backgroundColor: 'var(--color-accent-orange)',
             textDecoration: 'none',
           }}
           aria-label={menuOpen ? "Cerrar menú de navegación" : "Abrir menú de secciones"}
@@ -226,7 +229,7 @@ export function Navigation() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.96 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
-              className="absolute right-0 top-full mt-3 w-72 sm:w-80 bg-white shadow-2xl p-6 z-[120]"
+              className="absolute right-0 top-full mt-3 w-[86vw] max-w-sm sm:w-80 bg-white shadow-2xl p-6 z-[120]"
               style={{
                 border: '1px solid var(--color-ink)',
                 boxShadow: '0 20px 45px rgba(0,0,0,0.22)',
@@ -247,6 +250,69 @@ export function Navigation() {
                     <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </button>
+              </div>
+
+              {/* Botones sociales/contacto dentro del menú en móvil */}
+              <div className="md:hidden pb-4 mb-4 border-b flex flex-col gap-2.5" style={{ borderColor: 'var(--color-section-border)' }}>
+                <span style={{ fontFamily: 'var(--font-technical)', fontSize: 10, letterSpacing: '0.14em', color: 'var(--color-accent-orange)', fontWeight: 'bold' }}>
+                  CONTACTO RÁPIDO
+                </span>
+                <div className="grid grid-cols-4 gap-2">
+                  <a
+                    href={PHONE_HREF}
+                    className="flex items-center justify-center py-2.5 transition-opacity hover:opacity-85"
+                    style={{ backgroundColor: 'var(--color-accent-orange)', color: 'var(--color-paper)', border: '1px solid var(--color-accent-orange)' }}
+                    aria-label={`Llamar al ${PHONE_DISPLAY}`}
+                    title={`Llamar al ${PHONE_DISPLAY}`}
+                  >
+                    <PhoneIcon />
+                  </a>
+                  <a
+                    href={WHATSAPP_HREF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center py-2.5 transition-opacity hover:opacity-85"
+                    style={{ backgroundColor: '#25D366', color: '#FFFFFF', border: '1px solid #25D366' }}
+                    aria-label="Abrir WhatsApp"
+                    title="Abrir WhatsApp"
+                  >
+                    <WhatsAppIcon />
+                  </a>
+                  <a
+                    href={TELEGRAM_HREF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center py-2.5 transition-opacity hover:opacity-85"
+                    style={{ backgroundColor: '#24A1DE', color: '#FFFFFF', border: '1px solid #24A1DE' }}
+                    aria-label="Abrir Telegram"
+                    title="Abrir Telegram"
+                  >
+                    <TelegramIcon />
+                  </a>
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="flex items-center justify-center py-2.5 transition-opacity hover:opacity-85"
+                    style={{ backgroundColor: 'var(--color-accent-orange)', color: 'var(--color-paper)', border: '1px solid var(--color-accent-orange)' }}
+                    aria-label={`Enviar correo a ${EMAIL}`}
+                    title={`Enviar correo a ${EMAIL}`}
+                  >
+                    <MailIcon />
+                  </a>
+                </div>
+                <a
+                  href={PHONE_HREF}
+                  className="mt-1 block text-center py-2 transition-opacity hover:opacity-85"
+                  style={{
+                    backgroundColor: 'var(--color-ink)',
+                    color: 'var(--color-paper)',
+                    fontFamily: 'var(--font-technical)',
+                    fontSize: 12,
+                    letterSpacing: '0.08em',
+                    textDecoration: 'none',
+                  }}
+                >
+                  LLAMAR: {PHONE_DISPLAY}
+                </a>
               </div>
 
               {/* Lista de secciones */}
