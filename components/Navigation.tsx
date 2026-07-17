@@ -105,13 +105,12 @@ export function Navigation() {
           href={WHATSAPP_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-orange-hover mobile-cta-filled-orange flex items-center justify-center px-2.5 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
+          className="flex items-center justify-center px-2.5 py-1.5 hover:!bg-[#25D366] hover:!border-[#25D366] hover:!text-white focus-visible:!bg-[#25D366] focus-visible:!border-[#25D366] focus-visible:!text-white transition-all duration-300"
           style={{
-            border: '1px solid var(--color-accent-orange)',
-            color: 'var(--color-accent-orange)',
+            border: '1px solid #25D366',
+            color: '#25D366',
             backgroundColor: 'transparent',
             textDecoration: 'none',
-            transition: 'background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease',
           }}
           aria-label="Abrir WhatsApp"
           title="Abrir WhatsApp"
@@ -124,13 +123,12 @@ export function Navigation() {
           href={TELEGRAM_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-orange-hover mobile-cta-filled-orange flex items-center justify-center px-2.5 py-1.5 hover:!bg-accent-orange hover:!border-accent-orange hover:!text-paper hover:!opacity-100 focus-visible:!bg-accent-orange focus-visible:!border-accent-orange focus-visible:!text-paper focus-visible:!opacity-100"
+          className="flex items-center justify-center px-2.5 py-1.5 hover:!bg-[#24A1DE] hover:!border-[#24A1DE] hover:!text-white focus-visible:!bg-[#24A1DE] focus-visible:!border-[#24A1DE] focus-visible:!text-white transition-all duration-300"
           style={{
-            border: '1px solid var(--color-accent-orange)',
-            color: 'var(--color-accent-orange)',
+            border: '1px solid #24A1DE',
+            color: '#24A1DE',
             backgroundColor: 'transparent',
             textDecoration: 'none',
-            transition: 'background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease',
           }}
           aria-label="Abrir Telegram"
           title="Abrir Telegram"
