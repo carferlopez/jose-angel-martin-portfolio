@@ -85,17 +85,6 @@ export function Manifesto() {
           </div>
         </motion.div>
 
-        <motion.p
-          className="mb-8 max-w-xl"
-          style={{ fontFamily: 'var(--font-technical)', fontSize: 14, lineHeight: 1.65, color: 'var(--color-ink)', opacity: 0.72 }}
-          initial={reduced ? undefined : { opacity: 0, y: 10 }}
-          whileInView={reduced ? undefined : { opacity: 0.72, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: reduced ? 0 : 0.55 }}
-        >
-          Ingeniero Técnico Eléctrico. Tramito tu expediente de principio a fin ante el Ayuntamiento.{' '}
-          <span style={{ opacity: 0.6 }}>Sin colas, me ocupo de la burocracia, sin sorpresas.</span>
-        </motion.p>
 
         <motion.div
           className="flex flex-wrap gap-3"
