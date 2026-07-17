@@ -44,7 +44,7 @@ export function Coverage() {
         <div>
           <motion.h2
             id="coverage-heading"
-            className="font-display mb-6"
+            className="font-display mb-8"
             style={{ fontSize: 'clamp(2rem, 4.5vw, 5rem)', color: 'var(--color-ink)' }}
             initial={reduced ? undefined : { opacity: 0, y: 16 }}
             whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
@@ -53,18 +53,6 @@ export function Coverage() {
           >
             <span className="highlight-heading">Dónde trabajo</span>
           </motion.h2>
-
-          <motion.p
-            className="mb-8"
-            style={{ fontFamily: 'var(--font-technical)', fontSize: 13, lineHeight: 1.75, opacity: 0.72 }}
-            initial={reduced ? undefined : { opacity: 0, y: 12 }}
-            whileInView={reduced ? undefined : { opacity: 0.72, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.08 }}
-          >
-            Tengo base en Pedro Muñoz y opero en toda la comarca de La Mancha. Conozco los
-            procedimientos y tiempos reales de tramitación de los ayuntamientos de la zona.
-          </motion.p>
 
           {/* Lista de municipios */}
           <motion.div
