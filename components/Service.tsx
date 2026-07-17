@@ -124,7 +124,7 @@ export function Service() {
             >
               <img
                 src="/media/compras.png"
-                alt="Servicios de Consultoría de Compras"
+                alt="Consultoría de Compras"
                 className="w-full h-full object-cover object-[20%_center] scale-[1.25] origin-[20%_center] group-hover:scale-[1.3] transition-all duration-700 ease-out"
                 style={{ display: 'block' }}
               />
@@ -152,7 +152,7 @@ export function Service() {
                 className="hover:opacity-80 transition-opacity"
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
-                <span className="highlight-heading">Servicios de Consultoría de Compras</span>
+                <span className="highlight-heading">Consultoría de Compras</span>
               </a>
             </h3>
 
