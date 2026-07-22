@@ -34,10 +34,11 @@ export function About() {
             style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
           >
             <TechnicalImage
-              src="/media/pepe_profile.jpeg?v=2"
+              src="/media/foto_sobre_mi_v3.jpeg"
               alt="Ingeniero Técnico Eléctrico"
               label="INGENIERO_TECNICO.JPEG"
               fill
+              unoptimized
               sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
               style={{ objectFit: 'cover' }}
             />
