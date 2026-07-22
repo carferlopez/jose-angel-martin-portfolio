@@ -98,6 +98,21 @@ export function Contact() {
           </a>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="mt-20 pt-6 border-t flex justify-between items-center" style={{ borderColor: 'var(--color-section-border)' }}>
+        <span style={{ fontFamily: 'var(--font-technical)', fontSize: 11, opacity: 0.65, letterSpacing: '0.06em' }}>
+          Web desarrollada por{' '}
+          <a
+            href="https://carlosmakes.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rotring font-semibold text-[var(--color-accent-orange)] opacity-100"
+          >
+            Carlosmakes.com
+          </a>
+        </span>
+      </footer>
     </section>
   )
 }
