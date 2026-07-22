@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 type TechnicalImageProps = ImageProps & { label?: string }
 
-export function TechnicalImage({ src, alt, label, className, ...props }: TechnicalImageProps) {
+export function TechnicalImage({ src, alt, label, className, unoptimized, ...props }: TechnicalImageProps) {
   const [error, setError] = useState(false)
   const name = label ?? (typeof src === 'string' ? (src.split('/').pop() ?? 'asset') : alt)
 
@@ -19,7 +19,7 @@ export function TechnicalImage({ src, alt, label, className, ...props }: Technic
       className={className}
       {...props}
       onError={() => setError(true)}
-      unoptimized={typeof src === 'string' && src.endsWith('.svg')}
+      unoptimized={unoptimized ?? (typeof src === 'string' && src.endsWith('.svg'))}
     />
   )
 }

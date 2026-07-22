@@ -33,14 +33,10 @@ export function About() {
             className="relative overflow-hidden bg-white"
             style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
           >
-            <TechnicalImage
-              src="/media/nuevafotosobremi.jpeg"
+            <img
+              src="/media/nuevafotosobremi.jpeg?v=10"
               alt="Ingeniero Técnico Eléctrico"
-              label="NUEVAFOTOSOBREMI.JPEG"
-              fill
-              unoptimized
-              sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
-              style={{ objectFit: 'cover' }}
+              className="w-full h-full object-cover block"
             />
             <div className="cross-mark cross-mark-orange top-3 left-3" />
             <div className="cross-mark cross-mark-orange top-3 right-3" />
