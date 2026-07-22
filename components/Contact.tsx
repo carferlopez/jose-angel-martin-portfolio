@@ -98,43 +98,6 @@ export function Contact() {
           </a>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="mt-24 pt-8 border-t" style={{ borderColor: 'var(--color-section-border)' }}>
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="flex flex-col gap-1">
-            <span style={{ fontFamily: 'var(--font-technical)', fontSize: 11, opacity: 0.55, letterSpacing: '0.08em' }}>
-              PEPE MARTÍN RAMÍREZ — INGENIERO TÉCNICO · PEDRO MUÑOZ, CIUDAD REAL
-            </span>
-            <div className="flex items-center gap-4">
-              <a href={`mailto:${EMAIL}`} className="rotring" style={{ fontFamily: 'var(--font-technical)', fontSize: 11, opacity: 0.4, color: 'var(--color-ink)', textDecoration: 'none' }}>
-                {EMAIL}
-              </a>
-            </div>
-          </div>
-          <div className="flex flex-col md:items-end gap-1.5">
-            <a
-              href="https://www.cogitialbacete.org/"
-              className="rotring opacity-40 hover:opacity-70 transition-opacity"
-              style={{ fontFamily: 'var(--font-technical)', fontSize: 11, color: 'var(--color-ink)', textDecoration: 'none', letterSpacing: '0.06em' }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Colegio Oficial de Ingenieros Técnicos Industriales de Albacete ↗
-            </a>
-            <span style={{ fontFamily: 'var(--font-technical)', fontSize: 10, opacity: 0.55, letterSpacing: '0.06em' }}>
-              Web desarrollada por <a href="https://t.me/Alphaville_27" target="_blank" rel="noopener noreferrer" className="rotring font-semibold text-[var(--color-accent-orange)] opacity-100">Creador</a>
-            </span>
-          </div>
-        </div>
-        <div
-          className="mt-4"
-          style={{ fontFamily: 'var(--font-technical)', fontSize: 9, opacity: 0.25, letterSpacing: '0.1em' }}
-          aria-hidden="true"
-        >
-          REV. 2026.A — NORMATIVA: DECRETO 54/2011 CLM · RD 2267/2004 · REBT 2002
-        </div>
-      </footer>
     </section>
   )
 }
