@@ -34,9 +34,9 @@ export function About() {
             style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
           >
             <TechnicalImage
-              src="/media/foto_sobre_mi_v3.jpeg"
+              src="/media/nuevafotosobremi.jpeg"
               alt="Ingeniero Técnico Eléctrico"
-              label="INGENIERO_TECNICO.JPEG"
+              label="NUEVAFOTOSOBREMI.JPEG"
               fill
               unoptimized
               sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
