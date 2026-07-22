@@ -22,41 +22,30 @@ export function About() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
-        {/* Foto con enlace a LinkedIn */}
+        {/* Foto */}
         <motion.div
           initial={reduced ? undefined : { opacity: 0, y: 20 }}
           whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <a
-            href="https://es.linkedin.com/in/pepe-martin-992849158"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block group cursor-pointer"
-            aria-label="Perfil de LinkedIn"
+          <div
+            className="relative overflow-hidden bg-white"
+            style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
           >
-            <div
-              className="relative overflow-hidden bg-white group-hover:shadow-lg transition-all duration-300"
-              style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
-            >
-              <TechnicalImage
-                src="/media/pepe_profile.jpeg?v=2"
-                alt="Ingeniero Técnico Eléctrico"
-                label="INGENIERO_TECNICO.JPEG"
-                fill
-                sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
-                style={{ objectFit: 'cover' }}
-              />
-              <div className="cross-mark cross-mark-orange top-3 left-3" />
-              <div className="cross-mark cross-mark-orange top-3 right-3" />
-              <div className="cross-mark cross-mark-orange bottom-3 left-3" />
-              <div className="cross-mark cross-mark-orange bottom-3 right-3" />
-              <div className="absolute bottom-4 right-4 bg-accent-orange text-paper px-2.5 py-1 text-[10px] font-technical uppercase tracking-wider opacity-90 group-hover:opacity-100 transition-opacity">
-                LinkedIn ↗
-              </div>
-            </div>
-          </a>
+            <TechnicalImage
+              src="/media/pepe_profile.jpeg?v=2"
+              alt="Ingeniero Técnico Eléctrico"
+              label="INGENIERO_TECNICO.JPEG"
+              fill
+              sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="cross-mark cross-mark-orange top-3 left-3" />
+            <div className="cross-mark cross-mark-orange top-3 right-3" />
+            <div className="cross-mark cross-mark-orange bottom-3 left-3" />
+            <div className="cross-mark cross-mark-orange bottom-3 right-3" />
+          </div>
         </motion.div>
 
         {/* Bio */}
@@ -73,16 +62,7 @@ export function About() {
               className="font-display mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 4.5rem)', color: 'var(--color-ink)' }}
             >
-              <a
-                href="https://es.linkedin.com/in/pepe-martin-992849158"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent-orange transition-colors inline-flex items-center gap-2 group"
-                aria-label="Perfil de LinkedIn"
-              >
-                <span className="highlight-heading">Ingeniero Técnico Eléctrico</span>
-                <span className="text-accent-orange opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all text-2xl md:text-3xl" aria-hidden="true">↗</span>
-              </a>
+              <span className="highlight-heading">Ingeniero Técnico Eléctrico</span>
             </h2>
           </div>
 
