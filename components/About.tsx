@@ -41,7 +41,7 @@ export function About() {
               style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
             >
               <TechnicalImage
-                src="/media/pepe_profile.jpeg"
+                src="/media/pepe_profile.jpeg?v=2"
                 alt="Ingeniero Técnico Eléctrico"
                 label="INGENIERO_TECNICO.JPEG"
                 fill
