@@ -34,7 +34,7 @@ export function About() {
             style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
           >
             <img
-              src="/media/nuevafotosobremi.jpeg?v=10"
+              src="/media/foto_exacta_usuario.jpeg?v=100"
               alt="Ingeniero Técnico Eléctrico"
               className="w-full h-full object-cover block"
             />
