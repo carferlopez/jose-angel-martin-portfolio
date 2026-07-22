@@ -34,16 +34,16 @@ export function About() {
             target="_blank"
             rel="noopener noreferrer"
             className="block group cursor-pointer"
-            aria-label="Perfil de LinkedIn de Pepe Martín Ramírez"
+            aria-label="Perfil de LinkedIn"
           >
             <div
               className="relative overflow-hidden bg-white group-hover:shadow-lg transition-all duration-300"
               style={{ border: '1px solid var(--color-accent-orange)', maxWidth: 420, aspectRatio: '500/561' }}
             >
               <TechnicalImage
-                src="/media/IMG_305B50A4EF4A-5.jpeg"
-                alt="Retrato de Pepe Martín Ramírez"
-                label="IMG_305B50A4EF4A-5.jpeg"
+                src="/media/pepe_profile.jpeg"
+                alt="Ingeniero Técnico Eléctrico"
+                label="INGENIERO_TECNICO.JPEG"
                 fill
                 sizes="(min-width: 768px) 420px, calc(100vw - 32px)"
                 style={{ objectFit: 'cover' }}
@@ -78,15 +78,12 @@ export function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent-orange transition-colors inline-flex items-center gap-2 group"
-                aria-label="Perfil de LinkedIn de Pepe Martín Ramírez"
+                aria-label="Perfil de LinkedIn"
               >
-                <span className="highlight-heading">Pepe Martín Ramírez</span>
+                <span className="highlight-heading">Ingeniero Técnico Eléctrico</span>
                 <span className="text-accent-orange opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all text-2xl md:text-3xl" aria-hidden="true">↗</span>
               </a>
             </h2>
-            <p style={{ fontFamily: 'var(--font-technical)', fontSize: 11, letterSpacing: '0.1em', opacity: 0.45, textTransform: 'uppercase' }}>
-              Ingeniero Técnico Eléctrico
-            </p>
           </div>
 
           <p style={{ fontFamily: 'var(--font-technical)', fontSize: 14, lineHeight: 1.78, color: 'var(--color-ink)', opacity: 0.78 }}>
